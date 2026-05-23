@@ -249,8 +249,8 @@
                         <div class="text-left mt-2"><span class="bg-emerald-700 text-white text-[11px] font-bold px-2.5 py-1 rounded-full count-badge">التكرار: 3</span></div>
                     </div>
                     <div onclick="countZikr(this, 1)" class="p-4 bg-amber-50/40 dark:bg-slate-700 border dark:border-slate-600 rounded-xl cursor-pointer transition">
-                        <p class="text-xs font-serif leading-relaxed font-bold text-emerald-800 dark:text-emerald-400">3. سيد الاستغفار:</p>
-                        <p class="text-sm font-serif mt-1">"اللَّهُمَّ أَنْتَ رَبِّي لا إِلَهَ إِلا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ لَكَ بِذَنْبِي فَاغْفِرْ لِي، فَإِنَّهُ لا يَغْفِرُ الذُّنُوبَ إِلا أَنْتَ."</p>
+                        <p class="text-xs font-serif leading-relaxed font-bold text-emerald-800 dark:text-emerald-400">3. سید الاستغفار:</p>
+                        <p class="text-sm font-serif mt-1">"اللَّهُمَّ أَنْتَ رَبِّي لا إِلَهَ إِلا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عهدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ لَكَ بِذَنْبِي فَاغْفِرْ لِي، فَإِنَّهُ لا يَغْفِرُ الذُّنُوبَ إِلا أَنْتَ."</p>
                         <div class="text-left mt-2"><span class="bg-emerald-700 text-white text-[11px] font-bold px-2.5 py-1 rounded-full count-badge">التكرار: 1</span></div>
                     </div>
                     <div onclick="countZikr(this, 4)" class="p-4 bg-amber-50/40 dark:bg-slate-700 border dark:border-slate-600 rounded-xl cursor-pointer transition">
@@ -397,6 +397,14 @@
                             <span>⭐ الطالب المتميز: حسين محمد حسين</span>
                             <span class="bg-white/20 text-[10px] px-2 py-0.5 rounded-md">خاتم القرآن الكريم 🎉</span>
                         </div>
+                        <div class="p-3 bg-gradient-to-r from-emerald-800 to-teal-800 text-white rounded-2xl font-bold text-xs shadow flex justify-between items-center">
+                            <span>⭐ الطالب المتميز: مالك أحمد</span>
+                            <span class="bg-white/20 text-[10px] px-2 py-0.5 rounded-md">خاتم القرآن الكريم 🎉</span>
+                        </div>
+                        <div class="p-3 bg-gradient-to-r from-emerald-800 to-teal-800 text-white rounded-2xl font-bold text-xs shadow flex justify-between items-center">
+                            <span>⭐ الطالب المتميز: مصعب أحمد</span>
+                            <span class="bg-white/20 text-[10px] px-2 py-0.5 rounded-md">خاتم القرآن الكريم 🎉</span>
+                        </div>
                     </div>
                 </div>
 
@@ -445,6 +453,7 @@
         let currentActiveRoomId = null;
         let typingTimeoutTracker = null;
 
+        // الحفاظ على جميع الطلاب في سجل الطلاب كما في الأول دون تغيير
         const staticStudents = ["احمد محمد حسين", "حسين محمد حسين", "مصعب احمد", "مالك احمد", "محمود تامر", "عبدالرحمن بكري", "خالد علي", "ياسين احمد"];
 
         function generateIdFromName(name) {
@@ -452,7 +461,6 @@
             return name.trim().toLowerCase().replace(/\s+/g, '-').replace(/[أإآ]/g, 'ا').replace(/ة/g, 'ه');
         }
 
-        // 🌗 دالة التحكم بالوضع الداكن والفاتح الاحترافي
         window.toggleDarkMode = function() {
             const htmlClass = document.documentElement.classList;
             const icon = document.getElementById('theme-toggle-icon');
