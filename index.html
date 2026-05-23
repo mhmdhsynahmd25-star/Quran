@@ -15,6 +15,20 @@
 </head>
 <body>
 
+    <div id="custom-in-app-notification" class="hidden fixed top-4 left-4 right-4 z-[9999] bg-gradient-to-r from-red-600 to-amber-600 text-white p-4 rounded-2xl shadow-2xl flex items-center justify-between animate-bounce">
+        <div class="flex items-center gap-3">
+            <span class="text-2xl" id="notification-icon">🔔</span>
+            <div class="text-right">
+                <h4 id="notification-title" class="font-bold text-sm md:text-base">تنبيه جديد!</h4>
+                <p id="notification-body" class="text-xs md:text-sm opacity-90 mt-0.5">هناك إجراء بانتظارك...</p>
+            </div>
+        </div>
+        <div class="flex gap-2">
+            <button id="notification-action-btn" class="bg-white text-gray-900 font-bold text-xs px-3 py-2 rounded-xl shadow-sm">عرض الآن</button>
+            <button onclick="closeInAppNotification()" class="bg-black/20 text-white font-bold text-xs px-2.5 py-2 rounded-xl">إغلاق ✖️</button>
+        </div>
+    </div>
+
     <div id="login-page" class="flex items-center justify-center min-h-screen bg-emerald-950 px-4 py-8">
         <div class="bg-white p-6 md:p-10 rounded-3xl shadow-2xl w-full max-w-md text-center border-b-8 border-emerald-700">
             <div class="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">🕌</div>
@@ -205,16 +219,6 @@
                             <p class="text-sm font-serif font-medium leading-relaxed">"اللَّهُمَّ أَنْتَ رَبِّي لاَ إِلَهَ إِلاَّ أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لاَ يَغْفِرُ الذُّنُوبَ إِلاَّ أَنْتَ."</p>
                             <div class="text-left mt-2"><span class="bg-emerald-700 text-white text-xs font-bold px-2.5 py-1 rounded-full count-badge">التكرار: 1</span></div>
                         </div>
-
-                        <div onclick="countZikr(this, 4)" class="p-4 bg-amber-50/40 border rounded-xl cursor-pointer transition hover:bg-amber-50">
-                            <p class="text-sm font-serif font-medium leading-relaxed">"اللَّهُمَّ إِنِّي أَصْبَحْتُ أُشْهِدُكَ وَأُشْهِدُ حَمَلَةَ عَرْشِكَ، وَمَلاَئِكَتَكَ وَجَمِيعَ خَلْقِكَ، أَنَّكَ أَنْتَ اللَّهُ لاَ إِلَهَ إِلاَّ أَنْتَ وَحْدَكَ لاَ شَرِيكَ لَكَ، وَأَنَّ مُحَمَّداً عَبْدُكَ وَرَسُولُكَ."</p>
-                            <div class="text-left mt-2"><span class="bg-emerald-700 text-white text-xs font-bold px-2.5 py-1 rounded-full count-badge">التكرار: 4</span></div>
-                        </div>
-
-                        <div onclick="countZikr(this, 3)" class="p-4 bg-amber-50/40 border rounded-xl cursor-pointer transition hover:bg-amber-50">
-                            <p class="text-sm font-serif font-medium leading-relaxed">"بِسْمِ اللَّهِ الَّذِي لاَ يَضُرِّ مَعَ اسْمِهِ شَيْءٌ فِي الأَرْضِ وَلاَ فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ."</p>
-                            <div class="text-left mt-2"><span class="bg-emerald-700 text-white text-xs font-bold px-2.5 py-1 rounded-full count-badge">التكرار: 3</span></div>
-                        </div>
                     </div>
 
                     <div class="space-y-3 pt-4 border-t">
@@ -227,21 +231,6 @@
 
                         <div onclick="countZikr(this, 3)" class="p-4 bg-stone-50 border rounded-xl cursor-pointer transition hover:bg-stone-100">
                             <p class="text-sm font-serif font-medium leading-relaxed">"بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ. قُلْ هُوَ اللَّهُ أَحَدٌ اللَّهُ الصَّمَدُ لَمْ يَلِدْ وَلَمْ يُولَدْ وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ." (قراءة سورة الإخلاص، والمعوذتين: الفلق والناس).</p>
-                            <div class="text-left mt-2"><span class="bg-indigo-700 text-white text-xs font-bold px-2.5 py-1 rounded-full count-badge">التكرار: 3</span></div>
-                        </div>
-
-                        <div onclick="countZikr(this, 1)" class="p-4 bg-stone-50 border rounded-xl cursor-pointer transition hover:bg-stone-100">
-                            <p class="text-sm font-serif font-medium leading-relaxed">"أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ. رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذِهِ اللَّيْلَةِ وَخَيْرَ مَا بَعْدَهَا، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي هَذِهِ اللَّيْلَةِ وَشَرِّ مَا بَعْدَهَا، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ."</p>
-                            <div class="text-left mt-2"><span class="bg-indigo-700 text-white text-xs font-bold px-2.5 py-1 rounded-full count-badge">التكرار: 1</span></div>
-                        </div>
-
-                        <div onclick="countZikr(this, 1)" class="p-4 bg-stone-50 border rounded-xl cursor-pointer transition hover:bg-stone-100">
-                            <p class="text-sm font-serif font-medium leading-relaxed">"اللَّهُمَّ أَنْتَ رَبِّي لاَ إِلَهَ إِلاَّ أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لاَ يَغْفِرُ الذُّنُوبَ إِلاَّ أَنْتَ."</p>
-                            <div class="text-left mt-2"><span class="bg-indigo-700 text-white text-xs font-bold px-2.5 py-1 rounded-full count-badge">التكرار: 1</span></div>
-                        </div>
-
-                        <div onclick="countZikr(this, 3)" class="p-4 bg-stone-50 border rounded-xl cursor-pointer transition hover:bg-stone-100">
-                            <p class="text-sm font-serif font-medium leading-relaxed">"أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ."</p>
                             <div class="text-left mt-2"><span class="bg-indigo-700 text-white text-xs font-bold px-2.5 py-1 rounded-full count-badge">التكرار: 3</span></div>
                         </div>
                     </div>
@@ -361,7 +350,7 @@
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
-        import { getDatabase, ref, push, onValue, remove, update, set, onDisconnect } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
+        import { getDatabase, ref, push, onValue, remove, update, set, onDisconnect, child, onChildAdded } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
 
         const firebaseConfig = {
           apiKey: "AIzaSyCEKdvaf1-y7LcbtBjzOhPtrOyzn7MMxL8",
@@ -385,7 +374,7 @@
         let targetPrivateUser = ""; 
         let privateJitsiApi = null;
         let recentInteractedUsers = [];
-        let isFirstLoadFinished = false; 
+        let systemBootTime = Date.now(); // لحجب الرسائل القديمة المخزنة مسبقاً
         let currentActiveRoomId = null;
 
         const staticStudents = ["احمد محمد حسين", "حسين محمد حسين", "مصعب احمد", "مالك احمد", "محمود تامر", "عبدالرحمن بكري", "خالد علي", "ياسين احمد"];
@@ -395,17 +384,37 @@
             return name.trim().toLowerCase().replace(/\s+/g, '-').replace(/[أإآ]/g, 'ا').replace(/ة/g, 'ه');
         }
 
-        // طلب إذن عرض الإشعارات على الهاتف أو الكمبيوتر بشكل فوري
-        function requestNotificationPermission() {
-            if ("Notification" in window) {
-                Notification.requestPermission();
-            }
-        }
+        // إظهار الإشعار المرئي والصوتي البديل داخل التطبيق
+        window.showInAppNotification = function(title, body, icon, actionCallback) {
+            const banner = document.getElementById('custom-in-app-notification');
+            document.getElementById('notification-title').innerText = title;
+            document.getElementById('notification-body').innerText = body;
+            document.getElementById('notification-icon').innerText = icon || "🔔";
+            
+            const actionBtn = document.getElementById('notification-action-btn');
+            actionBtn.onclick = function() {
+                actionCallback();
+                closeInAppNotification();
+            };
 
-        // دالة إرسال الإشعارات والتحكم بها
+            banner.classList.remove('hidden');
+            // تشغيل صوت التنبيه الفوري
+            document.getElementById('notification-sound').play().catch(()=>{});
+        };
+
+        window.closeInAppNotification = function() {
+            document.getElementById('custom-in-app-notification').classList.add('hidden');
+            document.getElementById('ringtone-sound').pause();
+        };
+
+        // دالة إرسال الإشعار الخارجي لنظام الهاتف (Push Notification)
         function triggerPushNotification(title, body) {
             if ("Notification" in window && Notification.permission === "granted") {
-                new Notification(title, { body: body, icon: "🕌" });
+                try {
+                    new Notification(title, { body: body, icon: "https://meet.jit.si/images/watermark.svg" });
+                } catch(e) {
+                    console.log("Push failed, using internal banner.");
+                }
             }
         }
 
@@ -449,7 +458,11 @@
 
         function enterPlatform(name, role, approvedStatus) {
             currentUserNameOriginal = name; globalUserRole = role; isApprovedStudent = approvedStatus;
-            requestNotificationPermission();
+            
+            // طلب إذن الإشعارات الخارجية فوراً عند تسجيل الدخول
+            if ("Notification" in window) {
+                Notification.requestPermission();
+            }
 
             if(name === "الشيخ أحمد عبد القوي") {
                 isUserSheikhAhmed = true;
@@ -470,8 +483,8 @@
             document.getElementById('login-page').classList.add('hidden');
             document.getElementById('app-main').classList.remove('hidden');
             
-            // بدء الاستماع لغرفة الإشعارات العامة والخاصة للمستخدم الحالي بعد تسجيل دخوله
-            listenForIncomingGlobalNotifications();
+            // إطلاق مستمعات الإشعارات الفورية
+            listenForIncomingCallsAndMessages();
         }
 
         function addToRecentChats(name) {
@@ -525,12 +538,10 @@
             listenToPrivateMessages();
         }
 
-        // بدء المكالمة وتحديث Firebase لتنبيه الطرف الآخر
         window.startPrivateCall = function(type) {
             if(!targetPrivateUser) return;
             const roomId = getPrivateChatRoomId(currentUserNameOriginal, targetPrivateUser);
             
-            // تسجيل حالة مكالمة نشطة لكي يسمع الطرف الآخر الرنين فوراً
             set(ref(db, `calls/${roomId}`), {
                 caller: currentUserNameOriginal,
                 receiver: targetPrivateUser,
@@ -550,7 +561,6 @@
 
             const privateRoomRoomId = "Private_Call_" + roomId;
 
-            // بناء واجهة Jitsi العملاقة والمحسنة لتملأ المساحة الكبيرة بالكامل للجميع
             privateJitsiApi = new JitsiMeetExternalAPI("meet.jit.si", {
                 roomName: privateRoomRoomId,
                 width: "100%",
@@ -595,7 +605,6 @@
             currentActiveRoomId = roomId;
             const privateRef = ref(db, `private_chats/${roomId}`);
             
-            let isInitialLoad = true;
             onValue(privateRef, (snapshot) => {
                 const box = document.getElementById('private-chat-box');
                 if(!box) return; box.innerHTML = "";
@@ -613,58 +622,64 @@
                         </div>`;
                 });
                 box.scrollTop = box.scrollHeight;
-                isInitialLoad = false;
             });
         }
 
-        // دالة مراقبة المكالمات الواردة والرسائل في الخلفية لإنتاج الإشعارات الشاملة على الشاشة
-        function listenForIncomingGlobalNotifications() {
-            // 1. مراقبة المكالمات الموجهة للمستخدم الحالي
+        // دالة المراقبة الفورية والمحدثة لحل مشكلة اختفاء الإشعارات تماماً
+        function listenForIncomingCallsAndMessages() {
+            
+            // 📡 أولاً: مراقبة المكالمات الواردة بشكل مباشر ومستمر
             onValue(ref(db, 'calls'), (snapshot) => {
                 if(!snapshot.exists()) {
                     document.getElementById('ringtone-sound').pause();
                     return;
                 }
-                snapshot.forEach((child) => {
-                    const callData = child.val();
-                    if(callData.receiver === currentUserNameOriginal && callData.status === "calling") {
+                snapshot.forEach((childNode) => {
+                    const callData = childNode.val();
+                    // التأكد من أن المكالمة موجهة لك وحالتها "جاري الرنين" ولم يمر عليها وقت طويل
+                    if(callData.receiver === currentUserNameOriginal && callData.status === "calling" && (Date.now() - callData.timestamp < 30000)) {
+                        
+                        // تشغيل رنين المكالمة المباشر فوراً
                         document.getElementById('ringtone-sound').play().catch(()=>{});
                         
-                        // إرسال إشعار فوري على شاشة الهاتف أو المتصفح
-                        triggerPushNotification("📞 اتصال خاص قادم!", `يتصل بك الآن: ${callData.caller} (اضغط للدخول والمحادثة)`);
+                        // 1. إطلاق إشعار نظام أندرويد/المتصفح الخارجي
+                        triggerPushNotification("📞 اتصال خاص قادم!", `يتصل بك الآن: ${callData.caller}`);
                         
-                        if(confirm(`📞 مكالمة واردة من [ ${callData.caller} ]\nهل تريد قبول المكالمة وفتح الشاشة الكبيرة الآن؟`)) {
+                        // 2. إطلاق المنصة المرئية البديلة فوق الواجهة لضمان الرؤية الكاملة
+                        showInAppNotification("📞 اتصال خاص قادم من " + callData.caller, "اضغط على زر القبول بالجانب لفتح شاشة الاتصال الكبيرة فوراً وتفعيل الصوت والفيديو.", "📹", function() {
                             document.getElementById('ringtone-sound').pause();
-                            update(ref(db, `calls/${child.key}`), { status: "connected" });
+                            update(ref(db, `calls/${childNode.key}`), { status: "connected" });
                             openPrivateChat(callData.caller);
-                            launchJitsiFrame(child.key, callData.type);
-                        }
+                            launchJitsiFrame(childNode.key, callData.type);
+                        });
                     }
                 });
             });
 
-            // 2. مراقبة الرسائل الخاصة الجديدة لإنتاج صوت وإشعار فوري إذا كان مغلقاً
-            onValue(ref(db, 'private_chats'), (snapshot) => {
-                if(!isFirstLoadFinished) { 
-                    isFirstLoadFinished = true; 
-                    return; 
-                }
-                if(snapshot.exists()) {
-                    snapshot.forEach((room) => {
-                        const roomId = room.key;
-                        if(roomId.includes(generateIdFromName(currentUserNameOriginal))) {
-                            // جلب آخر رسالة في الغرفة
-                            let lastMsg = null;
-                            room.forEach((msg) => { lastMsg = msg.val(); });
+            // ✉️ ثانياً: مراقبة كافة غرف الدردشة الخاصة لأي رسائل جديدة
+            onChildAdded(ref(db, 'private_chats'), (roomSnapshot) => {
+                const roomId = roomSnapshot.key;
+                
+                // نراقب فقط الغرف التي تحتوي على اسم المستخدم الحالي
+                if(roomId.includes(generateIdFromName(currentUserNameOriginal))) {
+                    // الاستماع للرسائل المضافة حديثاً داخل هذه الغرفة بعينها
+                    onChildAdded(ref(db, `private_chats/${roomId}`), (msgSnapshot) => {
+                        const msgData = msgSnapshot.val();
+                        
+                        // حماية: نتأكد من أن الرسالة جديدة كلياً (أُرسلت بعد فتح الصفحة) وليست قديمة ومخزنة
+                        if(msgData.timestamp > systemBootTime && msgData.sender !== currentUserNameOriginal) {
                             
-                            if(lastMsg && lastMsg.sender !== currentUserNameOriginal) {
-                                // تشغيل صوت التنبيه للرسالة القادمة
+                            // أطلق إشعار المتصفح الخارجي
+                            triggerPushNotification(`✉️ رسالة خاصة من ${msgData.sender}`, msgData.message);
+                            
+                            // إذا لم تكن تفتح نافذة محادثة هذا الشخص حالياً، أظهر الإشعار الداخلي المتطور
+                            if(currentActiveRoomId !== roomId) {
+                                showInAppNotification(`✉️ رسالة خاصة من ${msgData.sender}`, msgData.message, "💬", function() {
+                                    openPrivateChat(msgData.sender);
+                                });
+                            } else {
+                                // لو كان داخل المحادثة، نكتفي بتشغيل صوت تنبيه خفيف فقط
                                 document.getElementById('notification-sound').play().catch(()=>{});
-                                
-                                // إذا لم يكن المستخدم يفتح صندوق محادثة هذا الشخص حالياً، أظهر له إشعاراً علوياً
-                                if(currentActiveRoomId !== roomId) {
-                                    triggerPushNotification(`✉️ رسالة خاصة جديدة من ${lastMsg.sender}`, lastMsg.message);
-                                }
                             }
                         }
                     });
@@ -702,7 +717,7 @@
                 targetNavBtnId = 'nav-chat-selection-page';
             }
             if(id !== 'private-chat-page') {
-                currentActiveRoomId = null; // تصفير الغرفة النشطة عند الخروج من صفحة الخاص
+                currentActiveRoomId = null; 
             }
             
             const activeBtn = document.getElementById(targetNavBtnId);
