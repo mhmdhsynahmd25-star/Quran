@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://meet.jit.si/external_api.js"></script>
     <script>
-        // إعدادات مخصصة لـ Tailwind لتدعم الوضع الداكن عبر الـ class
+        // إعدادات Tailwind للوضع الداكن عبر الـ class
         tailwind.config = {
             darkMode: 'class',
             theme: {
@@ -30,10 +30,10 @@
 
     <div id="global-broadcast-banner" class="hidden bg-gradient-to-r from-amber-600 to-red-600 text-white text-center py-2.5 px-4 font-bold text-xs md:text-sm shadow-md sticky top-0 z-[60] flex items-center justify-center gap-2">
         <span class="animate-pulse text-base">📢</span>
-        <span id="broadcast-text-content">جاري تحميل الإعلانات الإدارية الهامة...</span>
+        <span id="broadcast-text-content">جاري تحميل التنبيهات الإدارية الهامة...</span>
     </div>
 
-    <div id="custom-in-app-notification" class="hidden fixed top-16 left-4 right-4 z-[9999] bg-gradient-to-r from-emerald-600 to-teal-600 text-white p-4 rounded-2xl shadow-2xl flex items-center justify-between animate-bounce">
+    <div id="custom-in-app-notification" class="hidden fixed top-16 left-4 right-4 z-[9999] bg-gradient-to-r from-emerald-600 to-teal-600 text-white p-4 rounded-2xl shadow-2xl flex items-center justify-between">
         <div class="flex items-center gap-3">
             <span class="text-2xl" id="notification-icon">🔔</span>
             <div class="text-right">
@@ -92,7 +92,7 @@
                             <p id="user-badge" class="text-[10px] text-emerald-350 bg-emerald-800/40 px-2 py-0.5 rounded-md inline-block mt-0.5">جاري التحقق...</p>
                         </div>
                     </div>
-                    <button onclick="toggleDarkMode()" class="lg:mr-4 bg-emerald-800 hover:bg-emerald-700 p-2 rounded-xl text-lg transition shadow" title="تبديل الوضع الليلي">
+                    <button onclick="toggleDarkMode()" class="lg:mr-4 bg-emerald-800 hover:bg-emerald-700 p-2 rounded-xl text-lg transition shadow">
                         <span id="theme-toggle-icon">🌙</span>
                     </button>
                 </div>
@@ -100,14 +100,14 @@
                 <div class="flex flex-wrap gap-1.5 text-xs justify-center">
                     <button id="nav-home" onclick="showPage('home')" class="nav-btn px-2.5 py-2 rounded-xl bg-emerald-800 font-bold transition">🏠 الرئيسية</button>
                     <button id="nav-quran" onclick="showPage('quran')" class="nav-btn px-2.5 py-2 rounded-xl font-medium transition">📖 المصحف</button>
-                    <button id="nav-teachers-page" onclick="showPage('teachers-page')" class="nav-btn px-2.5 py-2 rounded-xl font-medium transition">👳 قائمة المعلمين</button>
+                    <button id="nav-teachers-page" onclick="showPage('teachers-page')" class="nav-btn px-2.5 py-2 rounded-xl font-medium transition">👳 هيئة التدريس</button>
                     <button id="nav-students" onclick="showPage('students')" class="nav-btn px-2.5 py-2 rounded-xl font-medium transition">👥 سجل الطلاب</button>
-                    <button id="nav-azkar-page" onclick="showPage('azkar-page')" class="nav-btn px-2.5 py-2 rounded-xl font-medium transition">📿 الأذكار</button>
+                    <button id="nav-azkar-page" onclick="showPage('azkar-page')" class="nav-btn px-2.5 py-2 rounded-xl font-medium transition">📿 الأذكار كاملة</button>
                     <button id="nav-plans" onclick="showPage('plans')" class="nav-btn px-2.5 py-2 rounded-xl font-medium transition">📅 الخطط</button>
                     <button id="nav-room" onclick="showPage('room')" class="nav-btn px-2.5 py-2 rounded-xl font-medium transition">🎙️ البث الحي</button>
                     <button id="nav-chat-selection-page" onclick="showPage('chat-selection-page')" class="nav-btn px-2.5 py-2 rounded-xl font-medium transition">💬 الدردشة والخاص</button>
-                    <button id="nav-join-teachers-page" onclick="showPage('join-teachers-page')" class="nav-btn px-2.5 py-2 rounded-xl font-medium transition">📝 تقديم الشيخ</button>
-                    <button id="nav-honors" onclick="showPage('honors')" class="nav-btn px-2.5 py-2 rounded-xl font-medium transition">🏆 الشرف والترتيب</button>
+                    <button id="nav-join-teachers-page" onclick="showPage('join-teachers-page')" class="nav-btn px-2.5 py-2 rounded-xl font-medium transition">📝 تقديم المحفظين</button>
+                    <button id="nav-honors" onclick="showPage('honors')" class="nav-btn px-2.5 py-2 rounded-xl font-medium transition">🏆 لوحة الشرف</button>
                 </div>
             </div>
         </nav>
@@ -137,12 +137,12 @@
 
                 <div class="bg-gradient-to-r from-emerald-800 to-emerald-950 text-white p-6 md:p-8 rounded-3xl shadow-xl text-center">
                     <h2 class="text-2xl md:text-3xl font-bold mb-2">مرحباً بكم في معهد الشيخ أحمد عبد القوي</h2>
-                    <p class="text-emerald-200 text-xs max-w-xl mx-auto leading-relaxed">المنصة التعليمية الشاملة لتسميع القراءات، ومتابعة درجات الحفظ الفوري.</p>
+                    <p class="text-emerald-200 text-xs max-w-xl mx-auto leading-relaxed">المنصة التعليمية الشاملة لتسميع القراءات، ومتابعة سجلات درجات الحفظ والتحفيز التنافسي الفوري.</p>
                 </div>
 
-                <div class="bg-amber-50/80 dark:bg-amber-950/20 border-r-8 border-amber-500 p-4 rounded-xl text-right">
+                <div id="thanks-card-sheikh-fixed" class="bg-amber-50/80 dark:bg-amber-950/20 border-r-8 border-amber-500 p-5 rounded-xl text-right shadow-sm">
                     <div class="flex items-center gap-2 mb-1 text-amber-800 dark:text-amber-400 font-bold text-base"><span>🌹</span><h3>شكر وتقدير خاص لفضيلة الشيخ أحمد عبد القوي</h3></div>
-                    <p class="text-gray-700 dark:text-gray-300 text-xs leading-relaxed font-medium">يتقدم جميع طلاب المعهد بخالص الشكر والتقدير والإجلال لفضيلة الشيخ **أحمد عبد القوي** على صبره الدؤوب ومتابعته الفورية في تحفيظ كتاب الله الكريم.</p>
+                    <p class="text-gray-700 dark:text-gray-300 text-xs leading-relaxed font-medium">يتقدم جميع طلاب المعهد بخالص الشكر والتقدير والإجلال لفضيلة الشيخ **أحمد عبد القوي** على صبره الدؤوب ومتابعته الفورية في تحفيظ كتاب الله الكريم وإدارة الحلقات والمنصة التعليمية المباركة.</p>
                 </div>
             </div>
 
@@ -236,15 +236,47 @@
             </div>
 
             <div id="azkar-page" class="page bg-white dark:bg-slate-800 p-6 rounded-3xl shadow-sm border border-gray-100 dark:border-slate-700">
-                <h2 class="text-xl font-bold mb-4 border-r-4 border-emerald-700 pr-2">📿 أذكار الصباح والمساء التفاعلية (إكمال الورد يمنحك +5 نقاط)</h2>
-                <div class="space-y-3">
+                <h2 class="text-xl font-bold mb-4 border-r-4 border-emerald-700 pr-2">📿 الورد الشامل لأذكار الصباح والمساء (إكمال الأذكار كاملة يمنحك +5 نقاط)</h2>
+                <div class="space-y-3 max-h-[600px] overflow-y-auto p-1 text-right">
                     <div onclick="countZikr(this, 1)" class="p-4 bg-amber-50/40 dark:bg-slate-700 border dark:border-slate-600 rounded-xl cursor-pointer transition">
-                        <p class="text-sm font-serif leading-relaxed">"أَعُوذُ بِاللهِ مِنَ الشَّيْطَانِ الرَّجِيمِ: اللّهُ لاَ إِلَـهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ..." (آية الكرسي)</p>
-                        <div class="text-left mt-2"><span class="bg-emerald-700 text-white text-xs font-bold px-2.5 py-1 rounded-full count-badge">التكرار: 1</span></div>
+                        <p class="text-xs font-serif leading-relaxed font-bold text-emerald-800 dark:text-emerald-400">1. آية الكرسي:</p>
+                        <p class="text-sm font-serif mt-1">"أَعُوذُ بِاللهِ مِنَ الشَّيْطَانِ الرَّجِيمِ: اللّهُ لاَ إِلَـهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاء وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ."</p>
+                        <div class="text-left mt-2"><span class="bg-emerald-700 text-white text-[11px] font-bold px-2.5 py-1 rounded-full count-badge">التكرار: 1</span></div>
                     </div>
                     <div onclick="countZikr(this, 3)" class="p-4 bg-amber-50/40 dark:bg-slate-700 border dark:border-slate-600 rounded-xl cursor-pointer transition">
-                        <p class="text-sm font-serif leading-relaxed">"بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ. قُلْ هُوَ اللَّهُ أَحَدٌ اللَّهُ الصَّمَدُ..." (سورة الإخلاص والمعوذتين)</p>
-                        <div class="text-left mt-2"><span class="bg-emerald-700 text-white text-xs font-bold px-2.5 py-1 rounded-full count-badge">التكرار: 3</span></div>
+                        <p class="text-xs font-serif leading-relaxed font-bold text-emerald-800 dark:text-emerald-400">2. سورة الإخلاص والمعوذتين:</p>
+                        <p class="text-sm font-serif mt-1">"بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ: قُلْ هُوَ اللَّهُ أَحَدٌ اللَّهُ الصَّمَدُ لَمْ يَلِدْ وَلَمْ يُولَدْ وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ." (ثلاث مرات)<br>"قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ..." (ثلاث مرات)<br>"قُلْ أَعُوذُ بِرَبِّ النَّاسِ..." (ثلاث مرات)</p>
+                        <div class="text-left mt-2"><span class="bg-emerald-700 text-white text-[11px] font-bold px-2.5 py-1 rounded-full count-badge">التكرار: 3</span></div>
+                    </div>
+                    <div onclick="countZikr(this, 1)" class="p-4 bg-amber-50/40 dark:bg-slate-700 border dark:border-slate-600 rounded-xl cursor-pointer transition">
+                        <p class="text-xs font-serif leading-relaxed font-bold text-emerald-800 dark:text-emerald-400">3. سيد الاستغفار:</p>
+                        <p class="text-sm font-serif mt-1">"اللَّهُمَّ أَنْتَ رَبِّي لا إِلَهَ إِلا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ لَكَ بِذَنْبِي فَاغْفِرْ لِي، فَإِنَّهُ لا يَغْفِرُ الذُّنُوبَ إِلا أَنْتَ."</p>
+                        <div class="text-left mt-2"><span class="bg-emerald-700 text-white text-[11px] font-bold px-2.5 py-1 rounded-full count-badge">التكرار: 1</span></div>
+                    </div>
+                    <div onclick="countZikr(this, 4)" class="p-4 bg-amber-50/40 dark:bg-slate-700 border dark:border-slate-600 rounded-xl cursor-pointer transition">
+                        <p class="text-xs font-serif leading-relaxed font-bold text-emerald-800 dark:text-emerald-400">4. الإعتاق من النار:</p>
+                        <p class="text-sm font-serif mt-1">"اللَّهُمَّ إِنِّي أَصْبَحْتُ أُشْهِدُكَ وَأُشْهِدُ حَمَلَةَ عَرْشِكَ، وَمَلائِكَتَكَ وَجَمِيعَ خَلْقِكَ، أَنَّكَ أَنْتَ اللَّهُ لا إِلَهَ إِلا أَنْتَ وَحْدَكَ لا شَرِيكَ لَكَ، وَأَنَّ مُحَمَّدًا عَبْدُكَ وَرَسُولُكَ."</p>
+                        <div class="text-left mt-2"><span class="bg-emerald-700 text-white text-[11px] font-bold px-2.5 py-1 rounded-full count-badge">التكرار: 4</span></div>
+                    </div>
+                    <div onclick="countZikr(this, 3)" class="p-4 bg-amber-50/40 dark:bg-slate-700 border dark:border-slate-600 rounded-xl cursor-pointer transition">
+                        <p class="text-xs font-serif leading-relaxed font-bold text-emerald-800 dark:text-emerald-400">5. الحماية التامة:</p>
+                        <p class="text-sm font-serif mt-1">"بِسْمِ اللَّهِ الَّذِي لا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الأَرْضِ وَلا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ."</p>
+                        <div class="text-left mt-2"><span class="bg-emerald-700 text-white text-[11px] font-bold px-2.5 py-1 rounded-full count-badge">التكرار: 3</span></div>
+                    </div>
+                    <div onclick="countZikr(this, 3)" class="p-4 bg-amber-50/40 dark:bg-slate-700 border dark:border-slate-600 rounded-xl cursor-pointer transition">
+                        <p class="text-xs font-serif leading-relaxed font-bold text-emerald-800 dark:text-emerald-400">6. الرضا السامي:</p>
+                        <p class="text-sm font-serif mt-1">"رَضِيتُ بِاللَّهِ رَبًّا، وَبِالإِسْلامِ دِينًا، وَبِمُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ نَبِيًّا."</p>
+                        <div class="text-left mt-2"><span class="bg-emerald-700 text-white text-[11px] font-bold px-2.5 py-1 rounded-full count-badge">التكرار: 3</span></div>
+                    </div>
+                    <div onclick="countZikr(this, 7)" class="p-4 bg-amber-50/40 dark:bg-slate-700 border dark:border-slate-600 rounded-xl cursor-pointer transition">
+                        <p class="text-xs font-serif leading-relaxed font-bold text-emerald-800 dark:text-emerald-400">7. كفاية الهم:</p>
+                        <p class="text-sm font-serif mt-1">"حَسْبِيَ اللَّهُ لا إِلَهَ إِلا هُوَ عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ."</p>
+                        <div class="text-left mt-2"><span class="bg-emerald-700 text-white text-[11px] font-bold px-2.5 py-1 rounded-full count-badge">التكرار: 7</span></div>
+                    </div>
+                    <div onclick="countZikr(this, 10)" class="p-4 bg-amber-50/40 dark:bg-slate-700 border dark:border-slate-600 rounded-xl cursor-pointer transition">
+                        <p class="text-xs font-serif leading-relaxed font-bold text-emerald-800 dark:text-emerald-400">8. الصلاة على النبي المباركة:</p>
+                        <p class="text-sm font-serif mt-1">"اللَّهُمَّ صَلِّ وَسَلِّمْ عَلَى نَبِيِّنَا مُحَمَّدٍ."</p>
+                        <div class="text-left mt-2"><span class="bg-emerald-700 text-white text-[11px] font-bold px-2.5 py-1 rounded-full count-badge">التكرار: 10</span></div>
                     </div>
                 </div>
                 <button id="claim-azkar-points-btn" onclick="claimAzkarPointsReward()" class="hidden w-full bg-amber-600 text-white font-bold p-3 rounded-xl mt-4 shadow text-xs animate-pulse">✨ أحسنت! اضغط هنا لإرسال +5 نقاط لحسابك في لوحة الشرف</button>
@@ -297,33 +329,27 @@
                     <h2 class="text-xl font-bold text-amber-900 dark:text-amber-400 border-r-4 border-amber-600 pr-2">🔒 دردشة خاصة ومؤشرات فورية</h2>
                     <button onclick="showPage('chat-selection-page')" class="text-xs font-bold text-gray-500 bg-gray-100 dark:bg-slate-700 px-3 py-1.5 rounded-lg">⬅️ العودة</button>
                 </div>
-
                 <div class="grid grid-cols-1 gap-4">
                     <div class="space-y-3 flex flex-col min-h-[550px] bg-stone-50 dark:bg-slate-900 border dark:border-slate-700 p-4 rounded-2xl shadow-inner">
                         <div id="active-dm-target-box" class="p-2.5 bg-amber-100/70 dark:bg-amber-950/40 rounded-xl text-center font-bold text-xs">
                             الرجاء اختيار اسم طالب أو معلم من السجلات لبدء دردشة خاصة معه
                         </div>
-
                         <div id="private-typing-indicator-zone" class="hidden text-right px-2 text-[11px] font-semibold text-emerald-600 dark:text-emerald-400 animate-pulse">
                             ✍️ <span id="typing-person-name">الشخص الآخر</span> يقوم بالكتابة الآن...
                         </div>
-
                         <div id="private-call-actions" class="hidden grid grid-cols-2 gap-2">
                             <button onclick="startPrivateCall('voice')" class="bg-emerald-600 text-white p-3 rounded-xl text-xs font-bold shadow-sm">📞 اتصال صوتي</button>
                             <button onclick="startPrivateCall('video')" class="bg-blue-600 text-white p-3 rounded-xl text-xs font-bold shadow-sm">📹 مكالمة فيديو</button>
                         </div>
-
                         <div id="private-video-frame" class="hidden w-full h-[400px] bg-black rounded-2xl overflow-hidden relative border-2 border-amber-500">
                             <button onclick="endPrivateCall()" class="absolute top-3 right-3 bg-red-600 text-white font-bold text-xs px-3 py-1.5 rounded-xl z-50">إنهاء ❌</button>
                             <div id="private-jitsi-container" class="w-full h-full"></div>
                         </div>
-
                         <div id="private-chat-box" class="flex-1 overflow-y-auto space-y-2 text-xs bg-white dark:bg-slate-800 p-4 border dark:border-slate-700 rounded-xl shadow-inner"></div>
-
                         <div class="space-y-1.5 pt-1 border-t dark:border-slate-700">
                             <div class="flex gap-2">
                                 <input type="text" id="private-msg-input" disabled class="flex-1 p-3 border text-xs rounded-xl outline-none bg-gray-100 dark:bg-slate-700" placeholder="اكتب رسالة في الدردشة الخاصة...">
-                                <button onclick="triggerVoiceNoteAlert()" id="private-voice-btn" disabled class="bg-red-600 hover:bg-red-700 text-white px-3.5 rounded-xl text-base shadow transition" title="تسجيل ورد صوتي للشيخ">🎙️</button>
+                                <button onclick="triggerVoiceNoteAlert()" id="private-voice-btn" disabled class="bg-red-600 hover:bg-red-700 text-white px-3.5 rounded-xl text-base shadow transition">🎙️</button>
                             </div>
                             <button onclick="sendPrivateMessage()" id="private-send-btn" disabled class="w-full bg-amber-700 text-white p-2.5 rounded-xl text-xs font-bold shadow-sm">إرسال خاص</button>
                         </div>
@@ -341,13 +367,13 @@
                     </div>
                 </div>
 
-                <h2 class="text-xl font-bold mb-1 border-r-4 border-emerald-700 pr-2">📝 تقديم طلبات الانضمام كمحفظ</h2>
+                <h2 class="text-xl font-bold mb-1 border-r-4 border-emerald-700 pr-2">📝 تقديم طلبات المحفظين الجدد للانضمام للمعهد</h2>
                 <div class="bg-gray-50 dark:bg-slate-900 p-6 rounded-2xl border dark:border-slate-700 my-4 max-w-lg mx-auto">
                     <div class="space-y-3">
                         <input type="text" id="teacher-form-name" placeholder="الاسم الكامل للمتقدم" class="w-full p-3 border text-xs rounded-xl dark:bg-slate-800">
                         <input type="text" id="teacher-form-phone" placeholder="رقم الهاتف والتواصل" class="w-full p-3 border text-xs rounded-xl dark:bg-slate-800">
-                        <textarea id="teacher-form-exp" placeholder="المؤهلات والإجازات التي تحملها..." class="w-full p-3 border text-xs rounded-xl dark:bg-slate-800 h-20"></textarea>
-                        <button onclick="submitTeacherForm()" class="w-full bg-emerald-700 text-white p-3 rounded-xl text-xs font-bold">إرسال طلب الانضمام للشيخ</button>
+                        <textarea id="teacher-form-exp" placeholder="المؤهلات والإجازات القرآنية التي تحملها..." class="w-full p-3 border text-xs rounded-xl dark:bg-slate-800 h-20"></textarea>
+                        <button onclick="submitTeacherForm()" class="w-full bg-emerald-700 text-white p-3 rounded-xl text-xs font-bold">إرسال طلب الانضمام لفضيلة الشيخ</button>
                     </div>
                 </div>
 
@@ -357,12 +383,32 @@
                 </div>
             </div>
 
-            <div id="honors" class="page bg-white dark:bg-slate-800 p-6 rounded-3xl shadow-sm text-center">
-                <div class="text-4xl mb-2">🏆</div>
-                <h2 class="text-2xl font-bold text-amber-600 mb-1">لوحة شرف معهد الشيخ أحمد عبد القوي</h2>
-                <p class="text-xs text-gray-500 dark:text-gray-400 mb-6">ترتيب تنازلي فوري للطلاب الأكثر تجميعاً للنقاط عبر الأذكار والتسميع الناجح</p>
-                <div id="honors-gamification-live-rankings" class="max-w-md mx-auto space-y-2">
+            <div id="honors" class="page bg-white dark:bg-slate-800 p-6 rounded-3xl shadow-sm text-center space-y-8">
+                <div>
+                    <div class="text-4xl mb-1">👑</div>
+                    <h2 class="text-2xl font-bold text-emerald-700 dark:text-emerald-400 mb-1">لوحة شرف خاتمي كتاب الله تعالى</h2>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mb-4">الطلاب المباركون الذين أتموا حفظ المصحف الشريف كاملاً بالمعهد</p>
+                    <div class="max-w-md mx-auto grid grid-cols-1 gap-2">
+                        <div class="p-3 bg-gradient-to-r from-emerald-800 to-teal-800 text-white rounded-2xl font-bold text-xs shadow flex justify-between items-center">
+                            <span>⭐ الطالب المتميز: أحمد محمد حسين</span>
+                            <span class="bg-white/20 text-[10px] px-2 py-0.5 rounded-md">خاتم القرآن الكريم 🎉</span>
+                        </div>
+                        <div class="p-3 bg-gradient-to-r from-emerald-800 to-teal-800 text-white rounded-2xl font-bold text-xs shadow flex justify-between items-center">
+                            <span>⭐ الطالب المتميز: حسين محمد حسين</span>
+                            <span class="bg-white/20 text-[10px] px-2 py-0.5 rounded-md">خاتم القرآن الكريم 🎉</span>
+                        </div>
                     </div>
+                </div>
+
+                <hr class="border-gray-200 dark:border-slate-700 w-1/2 mx-auto">
+
+                <div>
+                    <div class="text-3xl mb-1">🏆</div>
+                    <h2 class="text-xl font-bold text-amber-600 mb-1">لوحة الترتيب العام ونقاط التحفيز</h2>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mb-6">مراقبة وتنافس فوري لبقية طلاب المعهد حسب نشاط الأذكار والتسميع</p>
+                    <div id="honors-gamification-live-rankings" class="max-w-md mx-auto space-y-2">
+                        </div>
+                </div>
             </div>
         </main>
     </div>
@@ -372,7 +418,7 @@
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
-        import { getDatabase, ref, push, onValue, remove, update, set, onDisconnect, child, onChildAdded } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
+        import { getDatabase, ref, push, onValue, remove, update, set, onDisconnect, onChildAdded } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
 
         const firebaseConfig = {
           apiKey: "AIzaSyCEKdvaf1-y7LcbtBjzOhPtrOyzn7MMxL8",
@@ -406,7 +452,7 @@
             return name.trim().toLowerCase().replace(/\s+/g, '-').replace(/[أإآ]/g, 'ا').replace(/ة/g, 'ه');
         }
 
-        // 🌗 دالة التحكم بالوضع الداكن والفاتح الاحترافي (Dark/Light Theme)
+        // 🌗 دالة التحكم بالوضع الداكن والفاتح الاحترافي
         window.toggleDarkMode = function() {
             const htmlClass = document.documentElement.classList;
             const icon = document.getElementById('theme-toggle-icon');
@@ -421,7 +467,6 @@
             }
         }
         
-        // فحص الثيم المفضل المخزن مسبقاً بجهاز المستخدم عند التمهيد
         if (localStorage.getItem('theme') === 'dark') {
             document.documentElement.classList.add('dark');
             setTimeout(() => { if(document.getElementById('theme-toggle-icon')) document.getElementById('theme-toggle-icon').innerText = "☀️"; }, 300);
@@ -504,7 +549,6 @@
                 set(statusRef, { name: currentUserNameOriginal, status: "online" });
                 onDisconnect(statusRef).remove();
                 
-                // تهيئة وحفظ هيكلية نقاط مدمجة وجديدة لكل طالب إذا لم تكن موجودة
                 if(!isUserSheikhAhmed) {
                     onValue(ref(db, `student_progress_records/${userSlug}`), (snap) => {
                         if(!snap.exists()) {
@@ -522,9 +566,7 @@
             setupTypingIndicatorListeners();
         }
 
-        // 📢 دالة مراقبة وبث الإعلانات الفورية وبطاقات الأداء والنقاط اللحظية لكل طالب
         function startGlobalBroadcastAndProgressSync() {
-            // 1. مزامنة شريط إعلانات الشيخ
             onValue(ref(db, 'global_broadcast_announcement'), (snapshot) => {
                 const banner = document.getElementById('global-broadcast-banner');
                 const textNode = document.getElementById('broadcast-text-content');
@@ -536,7 +578,6 @@
                 }
             });
 
-            // 2. مزامنة بطاقة أداء الحفظ والنقاط في الصفحة الرئيسية للطالب نفسه
             if(!isUserSheikhAhmed) {
                 const mySlug = generateIdFromName(currentUserNameOriginal);
                 onValue(ref(db, `student_progress_records/${mySlug}`), (snapshot) => {
@@ -546,7 +587,6 @@
                         document.getElementById('tracker-my-status').innerText = data.rating || "لا يوجد تقييم";
                         document.getElementById('tracker-my-points').innerText = `${data.points || 0} نقطة ✨`;
                         
-                        // تلوين التقييم بشكل جمالي تنافسي
                         const rateBadge = document.getElementById('tracker-my-status');
                         if(data.rating && data.rating.includes("ممتاز")) { rateBadge.className = "inline-block px-2.5 py-1 text-xs font-bold rounded-md bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-350 mt-1"; }
                         else if(data.rating && data.rating.includes("جيد")) { rateBadge.className = "inline-block px-2.5 py-1 text-xs font-bold rounded-md bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-300 mt-1"; }
@@ -555,7 +595,6 @@
                 });
             }
 
-            // 3. مزامنة وعرض البيانات داخل جدول سجل الطلاب الشامل مع ترتيب قائمة الشرف والترتيب العام
             onValue(ref(db, 'student_progress_records'), (snapshot) => {
                 const honorsContainer = document.getElementById('honors-gamification-live-rankings');
                 if(!honorsContainer) return;
@@ -568,7 +607,6 @@
                         const data = childNode.val();
                         allRankingsArray.push(data);
 
-                        // تحديث الخانات في جدول صفحة الطلاب تلقائياً إذا كانت الخانة موجودة على الشاشة
                         const row = document.getElementById(`row-${slug}`);
                         if(row) {
                             row.querySelector('.s-surah').innerText = data.last_surah || "لم تسمع";
@@ -578,7 +616,6 @@
                     });
                 }
 
-                // ترتيب الطلاب تنازلياً حسب النقاط لبناء لوحة الشرف
                 allRankingsArray.sort((a, b) => (b.points || 0) - (a.points || 0));
                 honorsContainer.innerHTML = "";
                 
@@ -601,7 +638,6 @@
             });
         }
 
-        // 🛠️ دالات الشيخ لنشر وتعديل وحذف التنبيهات من لوحة التحكم
         window.publishGlobalBroadcastBySheikh = function() {
             const text = document.getElementById('sheikh-broadcast-input').value.trim();
             if(!text) { alert("فضلاً اكتب نص التنبيه أولاً لنشره"); return; }
@@ -615,7 +651,6 @@
             remove(ref(db, 'global_broadcast_announcement')).then(() => { alert("تم مسح وإخفاء شريط التنبيهات من عند جميع الطلاب."); });
         }
 
-        // 🛠️ دالة الشيخ لتحديث سجل تسميع الطالب ومنحه نقاط المكافأة تلقائياً
         window.saveStudentProgressBySheikh = function() {
             const studentName = document.getElementById('sheikh-select-student-target').value;
             const surahText = document.getElementById('sheikh-input-surah').value.trim();
@@ -624,13 +659,11 @@
             if(!studentName || !surahText) { alert("فضلاً اختر الطالب واكتب السورة المسمّعة أولاً"); return; }
             const slug = generateIdFromName(studentName);
             
-            // جلب النقاط الحالية لإضافة المكافأة (+10) عليها
             const progressRef = ref(db, `student_progress_records/${slug}`);
             onValue(progressRef, (snapshot) => {
                 let currentPoints = 0;
                 if(snapshot.exists()) { currentPoints = snapshot.val().points || 0; }
                 
-                // نقوم بالتحديث لمرة واحدة فقط لمنع التكرار اللانهائي بالـ Listener
                 update(progressRef, {
                     name: studentName,
                     last_surah: surahText,
@@ -643,7 +676,6 @@
             document.getElementById('sheikh-input-surah').value = "";
         }
 
-        // ✍️ إعداد مستمعات خاصية "جاري الكتابة الآن..." (Typing Indicator Engine)
         function setupTypingIndicatorListeners() {
             const inputField = document.getElementById('private-msg-input');
             if(!inputField) return;
@@ -653,7 +685,6 @@
                 const roomId = getPrivateChatRoomId(currentUserNameOriginal, targetPrivateUser);
                 set(ref(db, `typing/${roomId}/${generateIdFromName(currentUserNameOriginal)}`), { isTyping: true });
 
-                // مسح التثبيت بعد ثانيتين من التوقف عن الكومنت
                 clearTimeout(typingTimeoutTracker);
                 typingTimeoutTracker = setTimeout(() => {
                     set(ref(db, `typing/${roomId}/${generateIdFromName(currentUserNameOriginal)}`), { isTyping: false });
@@ -661,7 +692,6 @@
             });
         }
 
-        // مراقبة الطرف الآخر هل يكتب حالياً أم لا عند فتح صندوق الخاص
         function listenToTypingIndicator(roomId) {
             const targetSlug = generateIdFromName(targetPrivateUser);
             onValue(ref(db, `typing/${roomId}/${targetSlug}`), (snapshot) => {
@@ -676,23 +706,21 @@
             });
         }
 
-        // 🎙️ تنبيه الملاحظات الصوتية الهجينة
         window.triggerVoiceNoteAlert = function() {
-            alert(`🎙️ ميزة تسجيل الورد الصوتي (Voice Note):\nالزر جاهز ومدمج بواجهة الخاص. سيتم ربط ميكروفون الهاتف السحابي لتخزين ملف الـ Mp3 تلقائياً بمسار Firebase Storage في التحديث القادم بمجرد تفعيل السيرفر السحابي الخاص بك!`);
+            alert(`🎙️ ميزة تسجيل الورد الصوتي (Voice Note):\nالزر جاهز ومدمج بواجهة الخاص وسيتم ربط مخزن الـ Mp3 مباشرة بـ Firebase Storage قريباً.`);
         }
 
-        // 📿 دالة عداد الأذكار ونظام تجميع النقاط الذكي للطالب
         window.countZikr = function(element, maxCount) {
             const badge = element.querySelector('.count-badge');
+            if(badge.innerText.includes('مكتمل')) return;
+            
             let current = parseInt(badge.innerText.replace('التكرار: ', ''));
-            if(current > 1) { badge.innerText = 'التكرار: ' + (current - 1); } 
-            else { 
+            if(current > 1) { 
+                badge.innerText = 'التكرار: ' + (current - 1); 
+            } else { 
                 badge.innerText = '✅ مكتمل'; 
                 badge.className = "bg-gray-400 text-white text-[9px] px-2 py-0.5 rounded-full count-badge"; 
                 element.style.opacity = "0.4"; 
-                element.onclick = null;
-                
-                // فحص هل انتهى من كافة الأذكار لفتح جائزة النقاط
                 checkAllAzkarCompletion();
             }
         }
@@ -715,7 +743,7 @@
                 update(refP, { points: p + 5 });
             }, { onlyOnce: true });
 
-            alert("مبارك لك! أتممت الورد اليومي للأذكار وحصلت على +5 نقاط أضيفت لرصيدك الإجمالي وبطاقة أدائك 🌟");
+            alert("مبارك لك! أتممت الورد اليومي للأذكار وحصلت على +5 نقاط أضيفت لرصيدك الإجمالي 🌟");
             document.getElementById('claim-azkar-points-btn').classList.add('hidden');
         }
 
@@ -736,7 +764,7 @@
             currentActiveRoomId = roomId;
             
             listenToPrivateMessages();
-            listenToTypingIndicator(roomId); // تفعيل تعقب الكتابة الفوري للغرفة
+            listenToTypingIndicator(roomId);
         }
 
         window.startPrivateCall = function(type) {
@@ -842,7 +870,7 @@
             const tExp = document.getElementById('teacher-form-exp').value.trim();
             if(!tName || !tPhone || !tExp) { alert("فضلاً املأ كافة حقول الاستمارة"); return; }
             push(ref(db, 'teacher_applications/'), { name: tName, phone: tPhone, experience: tExp, date: new Date().toLocaleDateString('ar-EG') }).then(() => {
-                alert("تم إرسال طلبك بنجاح لفضيلة الشيخ.");
+                alert("تم إرسال طلب انضمامك بنجاح لفضيلة الشيخ.");
                 document.getElementById('teacher-form-name').value = ""; document.getElementById('teacher-form-phone').value = ""; document.getElementById('teacher-form-exp').value = "";
             });
         }
@@ -854,8 +882,6 @@
                 remove(ref(db, `student_applications/${id}`));
             }
         }
-
-        window.triggerNav = function(btnId) { const btn = document.getElementById(btnId); if(btn) { btn.click(); } }
 
         onStringDataLoad();
         function onStringDataLoad() {
