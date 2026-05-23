@@ -1,4 +1,4 @@
-<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -35,8 +35,10 @@
                 <div class="flex flex-wrap gap-2 text-sm justify-center">
                     <button onclick="showPage('home')" class="nav-btn px-4 py-2 rounded-lg bg-emerald-800 font-medium transition hover:bg-emerald-700">الرئيسية</button>
                     <button onclick="showPage('quran')" class="nav-btn px-4 py-2 rounded-lg font-medium transition hover:bg-emerald-700">المصحف والآيات</button>
+                    <button onclick="showPage('students')" class="nav-btn px-4 py-2 rounded-lg font-medium transition hover:bg-emerald-700">قائمة الطلاب</button>
                     <button onclick="showPage('plans')" class="nav-btn px-4 py-2 rounded-lg font-medium transition hover:bg-emerald-700">خطط التسميع</button>
-                    <button onclick="showPage('room')" class="nav-btn px-4 py-2 rounded-lg font-medium transition hover:bg-emerald-700">غرفة التسميع الصوتية</button>
+                    <button onclick="showPage('room')" class="nav-btn px-4 py-2 rounded-lg font-medium transition hover:bg-emerald-700">حلقة التسميع (المكالمة)</button>
+                    <button onclick="showPage('chat-page')" class="nav-btn px-4 py-2 rounded-lg font-medium transition hover:bg-emerald-700">💬 غرفة الدردشة</button>
                     <button onclick="showPage('honors')" class="nav-btn px-4 py-2 rounded-lg font-medium transition hover:bg-emerald-700">لوحة الشرف</button>
                 </div>
             </div>
@@ -47,26 +49,22 @@
             <div id="home" class="page active py-6">
                 <div class="bg-gradient-to-r from-emerald-800 to-emerald-950 text-white p-8 rounded-3xl shadow-xl text-center mb-8">
                     <h2 class="text-3xl font-bold mb-3">أهلاً بكم في معهد الشيخ أحمد عبد القوي</h2>
-                    <p class="text-emerald-200 text-sm max-w-xl mx-auto leading-relaxed">منصتكم التعليمية المتكاملة لحفظ كتاب الله وسنة رسوله، مجهزة بالبث المباشر للصوت والفيديو والمصحف الإلكتروني المتزامن.</p>
+                    <p class="text-emerald-200 text-sm max-w-xl mx-auto leading-relaxed">منصتكم التعليمية المتكاملة لحفظ كتاب الله وسنة رسوله، مجهزة بالبث المباشر وشات تفاعلي مطور ومستقل يسمح بتعديل وحذف الرسائل.</p>
                 </div>
                 
                 <h3 class="text-lg font-bold text-gray-800 mb-4 border-r-4 border-emerald-700 pr-2">أقسام المعهد السريعة:</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                     <button onclick="showPage('quran')" class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition text-right flex items-center gap-4">
                         <span class="text-3xl bg-emerald-50 p-3 rounded-xl">📖</span>
                         <div><h4 class="font-bold text-gray-900">المصحف الشريف</h4><p class="text-xs text-gray-500">قراءة الآيات والسور</p></div>
                     </button>
-                    <button onclick="showPage('plans')" class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition text-right flex items-center gap-4">
-                        <span class="text-3xl bg-amber-50 p-3 rounded-xl">📅</span>
-                        <div><h4 class="font-bold text-gray-900">جدول الخطط</h4><p class="text-xs text-gray-500">متابعة الورد اليومي</p></div>
-                    </button>
                     <button onclick="showPage('room')" class="bg-emerald-800 text-white p-6 rounded-2xl shadow-sm hover:bg-emerald-900 transition text-right flex items-center gap-4">
                         <span class="text-3xl bg-emerald-700/50 p-3 rounded-xl">🎙️</span>
-                        <div><h4 class="font-bold">غرفة التسميع</h4><p class="text-xs text-emerald-200">بث حي صوت وفيديو</p></div>
+                        <div><h4 class="font-bold">المكالمة المباشرة</h4><p class="text-xs text-emerald-200">بث حي صوت وفيديو</p></div>
                     </button>
-                    <button onclick="showPage('honors')" class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition text-right flex items-center gap-4">
-                        <span class="text-3xl bg-amber-100 p-3 rounded-xl">🏆</span>
-                        <div><h4 class="font-bold text-gray-900">لوحة الشرف</h4><p class="text-xs text-gray-500">أوائل الطلبة والخاتمين</p></div>
+                    <button onclick="showPage('chat-page')" class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition text-right flex items-center gap-4">
+                        <span class="text-3xl bg-amber-50 p-3 rounded-xl">💬</span>
+                        <div><h4 class="font-bold text-gray-900">غرفة الدردشة</h4><p class="text-xs text-gray-500">شات ومناقشات تفاعلية</p></div>
                     </button>
                 </div>
             </div>
@@ -79,16 +77,50 @@
                 <div id="ayah-section" class="hidden">
                     <button onclick="backToSurahs()" class="bg-gray-100 text-gray-700 px-4 py-2 rounded-xl font-bold mb-4 hover:bg-gray-200 transition text-sm flex items-center gap-1">➡️ العودة لقائمة السور</button>
                     <h2 id="current-surah-name" class="text-2xl font-bold mb-6 text-emerald-800 text-center bg-emerald-50 py-3 rounded-2xl"></h2>
-                    <div id="verses-container" class="bg-stone-50 p-6 md:p-8 rounded-2xl border text-right leading-relaxed tracking-wide shadow-inner text-stone-900">
-                        جاري تحميل الآيات المباركة...
-                    </div>
+                    <div id="verses-container" class="bg-stone-50 p-6 md:p-8 rounded-2xl border text-right leading-relaxed tracking-wide shadow-inner text-stone-900">جاري تحميل الآيات المباركة...</div>
+                </div>
+            </div>
+
+            <div id="students" class="page bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
+                <h2 class="text-xl font-bold mb-2 text-gray-800 border-r-4 border-emerald-700 pr-2">سجل الطلاب المقيدين بالمعهد</h2>
+                <p class="text-xs text-gray-500 mb-6">قائمة رسمية بجميع الحفاظ والطلاب تحت إشراف فضيلة الشيخ</p>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-right border-collapse rounded-xl overflow-hidden shadow-sm">
+                        <thead>
+                            <tr class="bg-emerald-900 text-white text-sm">
+                                <th class="p-4">اسم الطالب</th>
+                                <th class="p-4">الحالة الإدارية</th>
+                                <th class="p-4">حالة الاتصال بالمنصة</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm text-gray-700 divide-y divide-gray-100 bg-gray-50">
+                            <tr class="hover:bg-emerald-50/50 transition">
+                                <td class="p-4 font-bold text-gray-900">أحمد محمد حسين</td>
+                                <td class="p-4 text-emerald-800 font-medium">طالب متميز (خاتم)</td>
+                                <td class="p-4 text-emerald-600 font-semibold flex items-center gap-1">🟢 متصل الآن</td>
+                            </tr>
+                            <tr class="hover:bg-emerald-50/50 transition">
+                                <td class="p-4 font-bold text-gray-900">حسين محمد حسين</td>
+                                <td class="p-4 text-emerald-800 font-medium">طالب متميز (خاتم)</td>
+                                <td class="p-4 text-emerald-600 font-semibold flex items-center gap-1">🟢 متصل الآن</td>
+                            </tr>
+                            <tr class="hover:bg-emerald-50/50 transition">
+                                <td class="p-4 font-bold text-gray-900">مصعب أحمد</td>
+                                <td class="p-4 text-emerald-800 font-medium">طالب متميز (خاتم)</td>
+                                <td class="p-4 text-emerald-600 font-semibold flex items-center gap-1">🟢 متصل الآن</td>
+                            </tr>
+                            <tr class="hover:bg-emerald-50/50 transition">
+                                <td class="p-4 font-bold text-gray-900">مالك أحمد</td>
+                                <td class="p-4 text-emerald-800 font-medium">طالب متميز (خاتم)</td>
+                                <td class="p-4 text-emerald-600 font-semibold flex items-center gap-1">🟢 متصل الآن</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
             <div id="plans" class="page bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
-                <h2 class="text-xl font-bold mb-2 text-gray-800 border-r-4 border-emerald-700 pr-2">جداول وخطط التسميع اليومية</h2>
-                <p class="text-xs text-gray-500 mb-6">الخطة المعتمدة داخل معهد الشيخ أحمد عبد القوي لتنظيم الأوراد</p>
-                
+                <h2 class="text-xl font-bold mb-6 text-gray-800 border-r-4 border-emerald-700 pr-2">جداول وخطط التسميع اليومية</h2>
                 <div class="overflow-x-auto">
                     <table class="w-full text-right border-collapse rounded-xl overflow-hidden shadow-sm">
                         <thead>
@@ -112,24 +144,6 @@
                                 <td class="p-4">مراجعة جزء تبارك</td>
                                 <td class="p-4 bg-emerald-50/40 text-emerald-800 font-semibold">04:00 مساءً</td>
                             </tr>
-                            <tr class="hover:bg-emerald-50/50 transition">
-                                <td class="p-4 font-bold text-emerald-900">الإثنين</td>
-                                <td class="p-4">سورة البقرة (من آية 51 إلى 75)</td>
-                                <td class="p-4">مراجعة جزء قد سمع</td>
-                                <td class="p-4 bg-emerald-50/40 text-emerald-800 font-semibold">06:00 مساءً</td>
-                            </tr>
-                            <tr class="hover:bg-emerald-50/50 transition">
-                                <td class="p-4 font-bold text-emerald-900">الثلاثاء</td>
-                                <td class="p-4">سورة البقرة (من آية 76 إلى 100)</td>
-                                <td class="p-4">مراجعة الجزء الأول والثاني</td>
-                                <td class="p-4 bg-emerald-50/40 text-emerald-800 font-semibold">04:00 مساءً</td>
-                            </tr>
-                            <tr class="hover:bg-emerald-50/50 transition">
-                                <td class="p-4 font-bold text-emerald-900">الأربعاء</td>
-                                <td class="p-4">سورة البقرة (من آية 101 إلى 125)</td>
-                                <td class="p-4">مراجعة الأجزاء المحفوظة سابقاً</td>
-                                <td class="p-4 bg-emerald-50/40 text-emerald-800 font-semibold">06:00 مساءً</td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -137,27 +151,25 @@
 
             <div id="room" class="page bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
                 <h2 class="text-xl font-bold mb-2 text-gray-800 border-r-4 border-emerald-700 pr-2">🎙️ حلقة التسميع المباشر بالصوت والصورة</h2>
-                <p class="text-xs text-red-500 mb-4 font-medium">💡 للتأكد من ظهور الصوت: يرجى الضغط على سماح (Allow) للمايكروفون عند طلب المتصفح لها.</p>
-                
-                <div id="video-container" class="w-full h-96 bg-slate-900 rounded-2xl mb-4 overflow-hidden border border-slate-800 flex flex-col items-center justify-center p-4">
-                    <span class="text-4xl mb-2">📡</span>
-                    <p class="text-slate-300 text-center text-sm font-medium">اضغط على الزر بالأسفل لتشغيل البث الصوتي والمرئي والانضمام للشيخ</p>
+                <p class="text-xs text-gray-500 mb-4">هذه الصفحة مخصصة بالكامل لعرض بث الفيديو وصوت الشيخ والطلاب بوضوح تام.</p>
+                <div id="video-container" class="w-full h-[500px] bg-slate-900 rounded-2xl mb-4 overflow-hidden flex flex-col items-center justify-center p-4 shadow-inner">
+                    <p class="text-slate-300 text-center text-sm">اضغط على الزر بالأسفل لتشغيل البث الصوتي والمرئي</p>
                 </div>
-                
-                <div class="text-center mb-6">
-                    <button onclick="startLiveMeeting()" class="bg-emerald-700 text-white px-8 py-3 rounded-xl font-bold hover:bg-emerald-800 shadow-md transition text-sm flex items-center gap-2 mx-auto">
-                        <span>🔊</span> تشغيل الصوت والفيديو الآن والاتصال بالمايك
-                    </button>
+                <div class="text-center">
+                    <button onclick="startLiveMeeting()" class="bg-emerald-700 text-white px-8 py-3 rounded-xl font-bold hover:bg-emerald-800 shadow-md transition text-sm">🔊 تشغيل الصوت والفيديو الآن</button>
                 </div>
+            </div>
 
-                <div class="border-t pt-4">
-                    <h3 class="text-sm font-bold mb-3 text-gray-700">💬 محادثة الحلقة الجانبية (الفايربيس):</h3>
-                    <div id="chat-box" class="bg-gray-50 h-40 overflow-y-auto p-4 rounded-xl border border-gray-100 mb-3 space-y-2 text-sm shadow-inner">
-                        <p class="text-xs text-gray-400 text-center">جاري الاتصال بقاعدة البيانات المباشرة...</p>
-                    </div>
-                    <div class="flex gap-2">
-                        <input type="text" id="msg-input" class="flex-1 p-3 border border-gray-200 bg-gray-50 text-sm rounded-xl outline-none focus:border-emerald-600 transition" placeholder="اكتب رسالة سريعة للشيخ والطلاب هنا...">
-                        <button onclick="send()" class="bg-emerald-900 text-white px-6 rounded-xl font-bold text-sm hover:bg-emerald-800 transition">إرسال</button>
+            <div id="chat-page" class="page bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
+                <h2 class="text-xl font-bold mb-2 text-gray-800 border-r-4 border-emerald-700 pr-2">💬 غرفة الدردشة والمناقشات العامة</h2>
+                <p class="text-xs text-gray-500 mb-4">هنا يمكنك كتابة الأسئلة، المتابعة، وتعديل أو حذف رسائلك الخاصة فوراً.</p>
+                
+                <div class="bg-gray-50 rounded-2xl border border-gray-100 p-4 shadow-inner flex flex-col h-[500px]">
+                    <div id="chat-box" class="flex-1 overflow-y-auto space-y-3 pr-2 mb-4"></div>
+                    
+                    <div class="flex gap-2 border-t pt-3">
+                        <input type="text" id="msg-input" class="flex-1 p-3 border border-gray-200 bg-white text-sm rounded-xl outline-none focus:border-emerald-600 transition" placeholder="اكتب رسالتك هنا للشيخ والزملاء...">
+                        <button onclick="send()" id="send-btn" class="bg-emerald-900 text-white px-8 rounded-xl font-bold text-sm hover:bg-emerald-800 transition shadow-sm">إرسال</button>
                     </div>
                 </div>
             </div>
@@ -165,15 +177,11 @@
             <div id="honors" class="page bg-white p-8 rounded-3xl shadow-sm border border-gray-100 text-center">
                 <div class="text-4xl mb-3">🏆</div>
                 <h2 class="text-2xl font-bold text-amber-600 mb-2">لوحة شرف معهد الشيخ أحمد عبد القوي</h2>
-                <p class="text-xs text-gray-500 mb-6">قائمة الطلاب الخاتمين والمتميزين في التسميع والحفظ المباشر</p>
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
                     <div class="p-4 bg-amber-50/60 border border-amber-100 rounded-xl font-bold text-sm text-amber-900">أحمد محمد حسين</div>
                     <div class="p-4 bg-amber-50/60 border border-amber-100 rounded-xl font-bold text-sm text-amber-900">مصعب أحمد</div>
                     <div class="p-4 bg-amber-50/60 border border-amber-100 rounded-xl font-bold text-sm text-amber-900">حسين محمد حسين</div>
                     <div class="p-4 bg-amber-50/60 border border-amber-100 rounded-xl font-bold text-sm text-amber-900">مالك أحمد</div>
-                </div>
-                <div class="p-4 bg-emerald-50 rounded-xl italic text-emerald-950 font-medium text-sm leading-relaxed max-w-xl mx-auto">
-                    "نقدم أسمى آيات الشكر والتقدير لفضيلة الشيخ أحمد عبد القوي، جزاكم الله خيراً على صبركم ومجهودكم المبارك في تعليمنا كتاب الله عز وجل."
                 </div>
             </div>
         </main>
@@ -181,7 +189,7 @@
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
-        import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
+        import { getDatabase, ref, push, onValue, remove, update } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
 
         const firebaseConfig = {
           apiKey: "AIzaSyCEKdvaf1-y7LcbtBjzOhPtrOyzn7MMxL8",
@@ -197,6 +205,8 @@
         const app = initializeApp(firebaseConfig);
         const db = getDatabase(app);
 
+        let editingMessageId = null; 
+
         window.login = function() {
             const name = document.getElementById('user-name').value;
             if(!name.trim()) { alert('فضلاً اكتب اسمك أولاً للدخول'); return; }
@@ -207,13 +217,82 @@
         window.showPage = function(id) {
             document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
             document.getElementById(id).classList.add('active');
-            
-            // إبراز الزر النشط في القائمة
             document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('bg-emerald-800'));
             event.currentTarget.classList.add('bg-emerald-800');
         }
 
-        // دالة تشغيل البث المباشر مع ضبط وحل مشكلة الصوت نهائياً للهواتف
+        // إرسال أو تعديل الرسالة
+        window.send = function() {
+            const m = document.getElementById('msg-input');
+            const user = document.getElementById('user-name').value || "حافظ";
+            
+            if(!m.value.trim()) return;
+
+            if (editingMessageId) {
+                update(ref(db, `chat/${editingMessageId}`), { message: m.value });
+                editingMessageId = null;
+                document.getElementById('send-btn').innerText = "إرسال";
+                document.getElementById('send-btn').className = "bg-emerald-900 text-white px-8 rounded-xl font-bold text-sm hover:bg-emerald-800 transition shadow-sm";
+            } else {
+                push(ref(db, 'chat/'), { name: user, message: m.value });
+            }
+            m.value = "";
+        }
+
+        // بدء تعديل الرسالة
+        window.startEdit = function(id, currentText) {
+            document.getElementById('msg-input').value = currentText;
+            editingMessageId = id;
+            const sendBtn = document.getElementById('send-btn');
+            sendBtn.innerText = "حفظ التعديل";
+            sendBtn.className = "bg-amber-600 text-white px-8 rounded-xl font-bold text-sm hover:bg-amber-700 transition shadow-sm";
+            document.getElementById('msg-input').focus();
+        }
+
+        // حذف الرسالة
+        window.deleteMessage = function(id) {
+            if(confirm("هل تريد حذف هذه الرسالة نهائياً؟")) {
+                remove(ref(db, `chat/${id}`));
+            }
+        }
+
+        // مزامنة وعرض الرسائل داخل صفحة الشات المستقلة
+        onValue(ref(db, 'chat/'), (snapshot) => {
+            const chatBox = document.getElementById('chat-box');
+            const currentUser = document.getElementById('user-name').value || "حافظ";
+            chatBox.innerHTML = ""; 
+            if(!snapshot.exists()) {
+                chatBox.innerHTML = `<p class="text-xs text-gray-400 text-center py-10">لا توجد رسائل سابقة. ابدأ المحادثة الآن!</p>`;
+                return;
+            }
+            snapshot.forEach((child) => {
+                const id = child.key;
+                const data = child.val();
+                
+                let controlButtons = "";
+                if(data.name === currentUser) {
+                    controlButtons = `
+                        <div class="flex gap-3 mr-auto text-xs">
+                            <button onclick="startEdit('${id}', '${data.message}')" class="text-amber-600 hover:text-amber-800 flex items-center gap-0.5">✏️ تعديل</button>
+                            <button onclick="deleteMessage('${id}')" class="text-red-500 hover:text-red-700 flex items-center gap-0.5">❌ حذف</button>
+                        </div>
+                    `;
+                }
+
+                chatBox.innerHTML += `
+                    <div class="p-3 bg-white rounded-xl shadow-sm border border-gray-100 text-right flex flex-col gap-1 max-w-[85%] ${data.name === currentUser ? 'mr-auto bg-emerald-50/30 border-emerald-100' : 'ml-auto'}">
+                        <div class="flex justify-between items-center gap-10 w-full border-b border-gray-50 pb-1">
+                            <span class="font-bold text-emerald-950 text-xs">${data.name}</span>
+                            ${controlButtons}
+                        </div>
+                        <p class="text-gray-800 text-sm mt-1 leading-relaxed whitespace-pre-wrap">${data.message}</p>
+                    </div>
+                `;
+            });
+            chatBox.scrollTop = chatBox.scrollHeight;
+        });
+
+        // تشغيل البث المباشر
         window.startLiveMeeting = function() {
             const currentUserName = document.getElementById('user-name').value || "طالب بمعهد الشيخ";
             const domain = "meet.jit.si";
@@ -223,45 +302,13 @@
                 height: "100%",
                 parentNode: document.querySelector('#video-container'),
                 userInfo: { displayName: currentUserName },
-                configOverwrite: {
-                    startWithAudioMuted: false,   // إجبار فتح المايكروفون عند الدخول
-                    startWithVideoMuted: false,   // إجبار فتح الكاميرا عند الدخول
-                    enableOpusRed: true,          // تفعيل معالجة الصوت المتقدمة لمنع انقطاعه
-                    disableAudioLevels: false,
-                    stereo: true                  // جلب الصوت بوضوح
-                },
-                interfaceConfigOverwrite: {
-                    AUDIO_LEVEL_PRIMARY_COLOR: 'rgba(16,185,129,1)',
-                    SHOW_JITSI_WATERMARK: false
-                }
+                configOverwrite: { startWithAudioMuted: false, startWithVideoMuted: false, enableOpusRed: true, stereo: true }
             };
             document.getElementById('video-container').innerHTML = ""; 
             new JitsiMeetExternalAPI(domain, options);
         }
 
-        window.send = function() {
-            const m = document.getElementById('msg-input');
-            const user = document.getElementById('user-name').value || "حافظ";
-            if(m.value.trim()) {
-                push(ref(db, 'chat/'), { name: user, message: m.value });
-                m.value = "";
-            }
-        }
-
-        onValue(ref(db, 'chat/'), (snapshot) => {
-            const chatBox = document.getElementById('chat-box');
-            chatBox.innerHTML = ""; 
-            if(!snapshot.exists()) {
-                chatBox.innerHTML = `<p class="text-xs text-gray-400 text-center">لا توجد رسائل سابقة في الحلقة.</p>`;
-                return;
-            }
-            snapshot.forEach((child) => {
-                const data = child.val();
-                chatBox.innerHTML += `<div class="p-2 bg-white rounded-lg shadow-sm border border-gray-100 text-right text-xs"><b>${data.name}:</b> ${data.message}</div>`;
-            });
-            chatBox.scrollTop = chatBox.scrollHeight;
-        });
-
+        // فهرس السور
         const surahs = ["الفاتحة", "البقرة", "آل عمران", "النساء", "المائدة", "الأنعام", "الأعراف", "الأنفال", "التوبة", "يونس", "هود", "يوسف", "الرعد", "إبراهيم", "الحجر", "النحل", "الإسراء", "الكهف", "مريم", "طه", "الأنبياء", "الحج", "المؤمنون", "النور", "الفرقان", "الشعراء", "النمل", "القصص", "العنكبوت", "الروم", "لقمان", "السجدة", "الأحزاب", "سبأ", "فاطر", "يس", "الصافات", "ص", "الزمر", "غافر", "فصلت", "الشورى", "الزخرف", "الدخان", "الجاثية", "الأحقاف", "محمد", "الفتح", "الحجرات", "ق", "الذاريات", "الطور", "النجم", "القمر", "الرحمن", "الواقعة", "الحديد", "المجادلة", "الحشر", "الممتحنة", "الصف", "الجمعة", "المنافقون", "التغابن", "الطلاق", "التحريم", "الملك", "القلم", "الحاقة", "المعارج", "نوح", "الجن", "المزمل", "المدثر", "القيامة", "الإنسان", "المرسلات", "النبأ", "النازعات", "عبس", "التكوير", "الانفطار", "المطففين", "الانشقاق", "البروج", "الطارق", "الأعلى", "الغاشية", "الفجر", "البلد", "الشمس", "الليل", "الضحى", "الشرح", "التين", "العلق", "القدر", "البينة", "الزلزلة", "العاديات", "القارعة", "التكاثر", "العصر", "الهمزة", "الفيل", "قريش", "الماعون", "الكوثر", "الكافرون", "النصر", "المسد", "الإخلاص", "الفلق", "الناس"];
         const list = document.getElementById('surah-list');
         surahs.forEach((s, i) => {
@@ -291,9 +338,6 @@
                         htmlContent += `<span class="ayah text-stone-800 font-medium inline-block">${text} <span class="text-emerald-700 font-bold text-xs mx-1 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">﴿${ayah.numberInSurah}﴾</span></span> `;
                     });
                     container.innerHTML = htmlContent;
-                })
-                .catch(() => {
-                    container.innerHTML = `<p class="text-red-500 text-center">فشل جلب المصحف، تفقد اتصال الإنترنت الخاص بك.</p>`;
                 });
         }
 
