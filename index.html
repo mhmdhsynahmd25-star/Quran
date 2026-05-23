@@ -60,16 +60,16 @@
                     </div>
                 </div>
                 <div class="flex flex-wrap gap-1.5 text-xs md:text-sm justify-center">
-                    <button onclick="showPage('home')" class="nav-btn px-2.5 py-2 rounded-xl bg-emerald-800 font-bold transition hover:bg-emerald-700 shadow-sm">🏠 الرئيسية</button>
-                    <button onclick="showPage('quran')" class="nav-btn px-2.5 py-2 rounded-xl font-medium transition hover:bg-emerald-700">📖 المصحف</button>
-                    <button onclick="showPage('teachers-page')" class="nav-btn px-2.5 py-2 rounded-xl font-medium transition hover:bg-emerald-700">👳 قائمة المعلمين</button>
-                    <button onclick="showPage('students')" class="nav-btn px-2.5 py-2 rounded-xl font-medium transition hover:bg-emerald-700">👥 سجل الطلاب</button>
-                    <button onclick="showPage('azkar-page')" class="nav-btn px-2.5 py-2 rounded-xl font-medium transition hover:bg-emerald-700">📿 الأذكار</button>
-                    <button onclick="showPage('plans')" class="nav-btn px-2.5 py-2 rounded-xl font-medium transition hover:bg-emerald-700">📅 الخطط</button>
-                    <button onclick="showPage('room')" class="nav-btn px-2.5 py-2 rounded-xl font-medium transition hover:bg-emerald-700">🎙️ البث الحي</button>
-                    <button onclick="showPage('chat-page')" class="nav-btn px-2.5 py-2 rounded-xl font-medium transition hover:bg-emerald-700">💬 الدردشة والخاص</button>
-                    <button onclick="showPage('join-teachers-page')" class="nav-btn px-2.5 py-2 rounded-xl font-medium transition hover:bg-emerald-700">📝 تقديم المحفظين</button>
-                    <button onclick="showPage('honors')" class="nav-btn px-2.5 py-2 rounded-xl font-medium transition hover:bg-emerald-700">🏆 الشرف</button>
+                    <button id="nav-home" onclick="showPage('home')" class="nav-btn px-2.5 py-2 rounded-xl bg-emerald-800 font-bold transition hover:bg-emerald-700 shadow-sm">🏠 الرئيسية</button>
+                    <button id="nav-quran" onclick="showPage('quran')" class="nav-btn px-2.5 py-2 rounded-xl font-medium transition hover:bg-emerald-700">📖 المصحف</button>
+                    <button id="nav-teachers-page" onclick="showPage('teachers-page')" class="nav-btn px-2.5 py-2 rounded-xl font-medium transition hover:bg-emerald-700">👳 قائمة المعلمين</button>
+                    <button id="nav-students" onclick="showPage('students')" class="nav-btn px-2.5 py-2 rounded-xl font-medium transition hover:bg-emerald-700">👥 سجل الطلاب</button>
+                    <button id="nav-azkar-page" onclick="showPage('azkar-page')" class="nav-btn px-2.5 py-2 rounded-xl font-medium transition hover:bg-emerald-700">📿 الأذكار</button>
+                    <button id="nav-plans" onclick="showPage('plans')" class="nav-btn px-2.5 py-2 rounded-xl font-medium transition hover:bg-emerald-700">📅 الخطط</button>
+                    <button id="nav-room" onclick="showPage('room')" class="nav-btn px-2.5 py-2 rounded-xl font-medium transition hover:bg-emerald-700">🎙️ البث الحي</button>
+                    <button id="nav-chat-selection-page" onclick="showPage('chat-selection-page')" class="nav-btn px-2.5 py-2 rounded-xl font-medium transition hover:bg-emerald-700">💬 الدردشة والخاص</button>
+                    <button id="nav-join-teachers-page" onclick="showPage('join-teachers-page')" class="nav-btn px-2.5 py-2 rounded-xl font-medium transition hover:bg-emerald-700">📝 تقديم المحفظين</button>
+                    <button id="nav-honors" onclick="showPage('honors')" class="nav-btn px-2.5 py-2 rounded-xl font-medium transition hover:bg-emerald-700">🏆 الشرف</button>
                 </div>
             </div>
         </nav>
@@ -79,7 +79,7 @@
             <div id="home" class="page active py-2">
                 <div class="bg-gradient-to-r from-emerald-800 to-emerald-950 text-white p-6 md:p-8 rounded-3xl shadow-xl text-center mb-6">
                     <h2 class="text-2xl md:text-3xl font-bold mb-2">مرحباً بكم في معهد الشيخ أحمد عبد القوي</h2>
-                    <p class="text-emerald-200 text-xs md:text-sm max-w-xl mx-auto leading-relaxed">المنصة التفاعلية الرسمية لتسميع القرآن وتواصل الطلاب والشيوخ عبر الخاص والعام بشكل مباشر.</p>
+                    <p class="text-emerald-200 text-xs md:text-sm max-w-xl mx-auto leading-relaxed">المنصة التفاعلية الرسمية لتسميع القرآن وتواصل الطلاب والشيوخ بشكل مباشر.</p>
                 </div>
 
                 <div class="bg-amber-50/80 border-r-8 border-amber-500 p-6 rounded-2xl shadow-sm mb-6 text-right">
@@ -87,12 +87,17 @@
                     <p class="text-gray-750 text-sm leading-relaxed font-medium">يتقدم جميع طلاب المعهد بخالص الشكر والتقدير والإجلال لفضيلة الشيخ **أحمد عبد القوي**، على جهوده المباركة والمستمرة، وصبره الدؤوب في تعليم كتاب الله.</p>
                 </div>
                 
-                <h3 class="text-sm font-bold text-gray-800 mb-3 border-r-4 border-emerald-700 pr-2">أقسام المعهد السريعة والموسعة:</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    <button onclick="showPage('quran')" class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 text-right flex items-center gap-3"><span class="text-2xl bg-emerald-50 p-3 rounded-xl">📖</span><div><h4 class="font-bold text-gray-900 text-sm">المصحف الشريف</h4></div></button>
-                    <button onclick="showPage('teachers-page')" class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 text-right flex items-center gap-3"><span class="text-2xl bg-blue-50 p-3 rounded-xl">👳</span><div><h4 class="font-bold text-gray-900 text-sm">قائمة المعلمين</h4></div></button>
-                    <button onclick="showPage('azkar-page')" class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 text-right flex items-center gap-3"><span class="text-2xl bg-teal-50 p-3 rounded-xl">📿</span><div><h4 class="font-bold text-gray-900 text-sm">الأذكار كاملة</h4></div></button>
-                    <button onclick="showPage('students')" class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 text-right flex items-center gap-3"><span class="text-2xl bg-purple-50 p-3 rounded-xl">👥</span><div><h4 class="font-bold text-gray-900 text-sm">سجل الطلاب</h4></div></button>
+                <h3 class="text-sm font-bold text-gray-800 mb-3 border-r-4 border-emerald-700 pr-2">الاختصارات السريعة لكافة قوائم المعهد:</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+                    <button onclick="triggerNav('nav-quran')" class="bg-white p-3 rounded-xl shadow-sm border border-gray-150 text-center block hover:bg-emerald-50/25 transition"><span class="text-xl block mb-1">📖</span><h4 class="font-bold text-gray-900 text-xs">المصحف الشريف</h4></button>
+                    <button onclick="triggerNav('nav-teachers-page')" class="bg-white p-3 rounded-xl shadow-sm border border-gray-150 text-center block hover:bg-emerald-50/25 transition"><span class="text-xl block mb-1">👳</span><h4 class="font-bold text-gray-900 text-xs">قائمة المعلمين</h4></button>
+                    <button onclick="triggerNav('nav-students')" class="bg-white p-3 rounded-xl shadow-sm border border-gray-150 text-center block hover:bg-emerald-50/25 transition"><span class="text-xl block mb-1">👥</span><h4 class="font-bold text-gray-900 text-xs">سجل الطلاب</h4></button>
+                    <button onclick="triggerNav('nav-azkar-page')" class="bg-white p-3 rounded-xl shadow-sm border border-gray-150 text-center block hover:bg-emerald-50/25 transition"><span class="text-xl block mb-1">📿</span><h4 class="font-bold text-gray-900 text-xs">الأذكار كاملة</h4></button>
+                    <button onclick="triggerNav('nav-plans')" class="bg-white p-3 rounded-xl shadow-sm border border-gray-150 text-center block hover:bg-emerald-50/25 transition"><span class="text-xl block mb-1">📅</span><h4 class="font-bold text-gray-900 text-xs">خطط التسميع</h4></button>
+                    <button onclick="triggerNav('nav-room')" class="bg-white p-3 rounded-xl shadow-sm border border-gray-150 text-center block hover:bg-emerald-50/25 transition"><span class="text-xl block mb-1">🎙️</span><h4 class="font-bold text-gray-900 text-xs">البث الحي</h4></button>
+                    <button onclick="triggerNav('nav-chat-selection-page')" class="bg-white p-3 rounded-xl shadow-sm border border-gray-150 text-center block hover:bg-emerald-50/25 transition"><span class="text-xl block mb-1">💬</span><h4 class="font-bold text-gray-900 text-xs">الدردشة والخاص</h4></button>
+                    <button onclick="triggerNav('nav-join-teachers-page')" class="bg-white p-3 rounded-xl shadow-sm border border-gray-150 text-center block hover:bg-emerald-50/25 transition"><span class="text-xl block mb-1">📝</span><h4 class="font-bold text-gray-900 text-xs">تقديم المحفظين</h4></button>
+                    <button onclick="triggerNav('nav-honors')" class="bg-white p-3 rounded-xl shadow-sm border border-gray-150 text-center block hover:bg-emerald-50/25 transition"><span class="text-xl block mb-1">🏆</span><h4 class="font-bold text-gray-900 text-xs">لوحة الشرف</h4></button>
                 </div>
             </div>
 
@@ -125,7 +130,7 @@
                                 <td class="p-4 font-bold text-emerald-950">👳 فضيلة الشيخ أحمد عبد القوي</td>
                                 <td class="p-4"><span class="bg-amber-100 text-amber-800 px-2 py-1 rounded-md text-xs font-bold">المشرف العام ومحفظ المعهد الرئيسي</span></td>
                                 <td class="p-4 status-cell text-gray-400 font-medium">⚪ غير متصل</td>
-                                <td class="p-4"><button onclick="openPrivateChat('الشيخ أحمد عبد القوي')" class="bg-emerald-700 text-white px-3 py-1 rounded-lg font-bold text-xs shadow-sm hover:bg-emerald-800">💬 رسالة خاصة</button></td>
+                                <td class="p-4"><button onclick="openPrivateChat('الشيخ أحمد عبد القوي')" class="bg-emerald-700 text-white px-3 py-1 rounded-lg font-bold text-xs shadow-sm hover:bg-emerald-800">💬 دردشة خاصة</button></td>
                             </tr>
                         </tbody>
                     </table>
@@ -134,7 +139,6 @@
 
             <div id="students" class="page bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
                 <h2 class="text-xl font-bold mb-4 text-gray-800 border-r-4 border-emerald-700 pr-2">سجل الطلاب المقيدين في المعهد</h2>
-                
                 <h3 class="text-sm font-bold text-emerald-800 mb-2">🥇 الطلاب الخاتمون لكتاب الله:</h3>
                 <div class="overflow-x-auto mb-6">
                     <table class="w-full text-right border-collapse rounded-xl overflow-hidden">
@@ -147,30 +151,10 @@
                             </tr>
                         </thead>
                         <tbody id="approved-khateem-list" class="text-xs text-gray-700 bg-gray-50 divide-y">
-                            <tr id="row-احمد-محمد-حسين">
-                                <td class="p-3 font-bold">أحمد محمد حسين</td>
-                                <td class="p-3 text-emerald-800 font-semibold">طالب متميز (خاتم)</td>
-                                <td class="p-3 status-cell text-gray-400">⚪ غير متصل</td>
-                                <td class="p-3"><button onclick="openPrivateChat('أحمد محمد حسين')" class="bg-slate-700 text-white px-2 py-1 rounded-md">💬 خاص</button></td>
-                            </tr>
-                            <tr id="row-حسين-محمد-حسين">
-                                <td class="p-3 font-bold">حسين محمد حسين</td>
-                                <td class="p-3 text-emerald-800 font-semibold">طالب متميز (خاتم)</td>
-                                <td class="p-3 status-cell text-gray-400">⚪ غير متصل</td>
-                                <td class="p-3"><button onclick="openPrivateChat('حسين محمد حسين')" class="bg-slate-700 text-white px-2 py-1 rounded-md">💬 خاص</button></td>
-                            </tr>
-                            <tr id="row-مصعب-احمد">
-                                <td class="p-3 font-bold">مصعب أحمد</td>
-                                <td class="p-3 text-emerald-800 font-semibold">طالب متميز (خاتم)</td>
-                                <td class="p-3 status-cell text-gray-400">⚪ غير متصل</td>
-                                <td class="p-3"><button onclick="openPrivateChat('مصعب أحمد')" class="bg-slate-700 text-white px-2 py-1 rounded-md">💬 خاص</button></td>
-                            </tr>
-                            <tr id="row-مالك-احمد">
-                                <td class="p-3 font-bold">مالك أحمد</td>
-                                <td class="p-3 text-emerald-800 font-semibold">طالب متميز (خاتم)</td>
-                                <td class="p-3 status-cell text-gray-400">⚪ غير متصل</td>
-                                <td class="p-3"><button onclick="openPrivateChat('مالك أحمد')" class="bg-slate-700 text-white px-2 py-1 rounded-md">💬 خاص</button></td>
-                            </tr>
+                            <tr id="row-احمد-محمد-حسين"><td class="p-3 font-bold">أحمد محمد حسين</td><td class="p-3 text-emerald-800 font-semibold">طالب متميز (خاتم)</td><td class="p-3 status-cell text-gray-400">⚪ غير متصل</td><td class="p-3"><button onclick="openPrivateChat('أحمد محمد حسين')" class="bg-slate-700 text-white px-2 py-1 rounded-md">💬 خاص</button></td></tr>
+                            <tr id="row-حسين-محمد-حسين"><td class="p-3 font-bold">حسين محمد حسين</td><td class="p-3 text-emerald-800 font-semibold">طالب متميز (خاتم)</td><td class="p-3 status-cell text-gray-400">⚪ غير متصل</td><td class="p-3"><button onclick="openPrivateChat('حسين محمد حسين')" class="bg-slate-700 text-white px-2 py-1 rounded-md">💬 خاص</button></td></tr>
+                            <tr id="row-مصعب-احمد"><td class="p-3 font-bold">مصعب أحمد</td><td class="p-3 text-emerald-800 font-semibold">طالب متميز (خاتم)</td><td class="p-3 status-cell text-gray-400">⚪ غير متصل</td><td class="p-3"><button onclick="openPrivateChat('مصعب أحمد')" class="bg-slate-700 text-white px-2 py-1 rounded-md">💬 خاص</button></td></tr>
+                            <tr id="row-مالك-احمد"><td class="p-3 font-bold">مالك أحمد</td><td class="p-3 text-emerald-800 font-semibold">طالب متميز (خاتم)</td><td class="p-3 status-cell text-gray-400">⚪ غير متصل</td><td class="p-3"><button onclick="openPrivateChat('مالك أحمد')" class="bg-slate-700 text-white px-2 py-1 rounded-md">💬 خاص</button></td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -187,30 +171,10 @@
                             </tr>
                         </thead>
                         <tbody id="approved-students-list" class="text-xs text-gray-700 bg-gray-50 divide-y">
-                            <tr id="row-محمود-تامر">
-                                <td class="p-3 font-bold">محمود تامر</td>
-                                <td class="p-3 text-amber-700">حفظ الأوراد اليومية والمراجعة</td>
-                                <td class="p-3 status-cell text-gray-400">⚪ غير متصل</td>
-                                <td class="p-3"><button onclick="openPrivateChat('محمود تامر')" class="bg-slate-700 text-white px-2 py-1 rounded-md">💬 خاص</button></td>
-                            </tr>
-                            <tr id="row-عبدالرحمن-بكري">
-                                <td class="p-3 font-bold">عبدالرحمن بكري</td>
-                                <td class="p-3 text-amber-700">حفظ الأوراد اليومية والمراجعة</td>
-                                <td class="p-3 status-cell text-gray-400">⚪ غير متصل</td>
-                                <td class="p-3"><button onclick="openPrivateChat('عبدالرحمن بكري')" class="bg-slate-700 text-white px-2 py-1 rounded-md">💬 خاص</button></td>
-                            </tr>
-                            <tr id="row-خالد-علي">
-                                <td class="p-3 font-bold">خالد علي</td>
-                                <td class="p-3 text-amber-700">حفظ الأوراد اليومية والمراجعة</td>
-                                <td class="p-3 status-cell text-gray-400">⚪ غير متصل</td>
-                                <td class="p-3"><button onclick="openPrivateChat('خالد علي')" class="bg-slate-700 text-white px-2 py-1 rounded-md">💬 خاص</button></td>
-                            </tr>
-                            <tr id="row-ياسين-احمد">
-                                <td class="p-3 font-bold">ياسين أحمد</td>
-                                <td class="p-3 text-amber-700">حفظ الأوراد اليومية والمراجعة</td>
-                                <td class="p-3 status-cell text-gray-400">⚪ غير متصل</td>
-                                <td class="p-3"><button onclick="openPrivateChat('ياسين أحمد')" class="bg-slate-700 text-white px-2 py-1 rounded-md">💬 خاص</button></td>
-                            </tr>
+                            <tr id="row-محمود-تامر"><td class="p-3 font-bold">محمود تامر</td><td class="p-3 text-amber-700">حفظ الأوراد اليومية والمراجعة</td><td class="p-3 status-cell text-gray-400">⚪ غير متصل</td><td class="p-3"><button onclick="openPrivateChat('محمود تامر')" class="bg-slate-700 text-white px-2 py-1 rounded-md">💬 خاص</button></td></tr>
+                            <tr id="row-عبدالرحمن-بكري"><td class="p-3 font-bold">عبدالرحمن بكري</td><td class="p-3 text-amber-700">حفظ الأوراد اليومية والمراجعة</td><td class="p-3 status-cell text-gray-400">⚪ غير متصل</td><td class="p-3"><button onclick="openPrivateChat('عبدالرحمن بكري')" class="bg-slate-700 text-white px-2 py-1 rounded-md">💬 خاص</button></td></tr>
+                            <tr id="row-خالد-علي"><td class="p-3 font-bold">خالد علي</td><td class="p-3 text-amber-700">حفظ الأوراد اليومية والمراجعة</td><td class="p-3 status-cell text-gray-400">⚪ غير متصل</td><td class="p-3"><button onclick="openPrivateChat('خالد علي')" class="bg-slate-700 text-white px-2 py-1 rounded-md">💬 خاص</button></td></tr>
+                            <tr id="row-ياسين-احمد"><td class="p-3 font-bold">ياسين أحمد</td><td class="p-3 text-amber-700">حفظ الأوراد اليومية والمراجعة</td><td class="p-3 status-cell text-gray-400">⚪ غير متصل</td><td class="p-3"><button onclick="openPrivateChat('ياسين أحمد')" class="bg-slate-700 text-white px-2 py-1 rounded-md">💬 خاص</button></td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -218,16 +182,68 @@
 
             <div id="azkar-page" class="page bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
                 <h2 class="text-xl font-bold mb-4 text-gray-800 border-r-4 border-emerald-700 pr-2">📿 أذكار الصباح والمساء كاملة مع العداد التفاعلي</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="space-y-2">
-                        <h3 class="font-bold text-emerald-800 border-b pb-1">🌅 أذكار الصباح:</h3>
-                        <div onclick="countZikr(this, 1)" class="p-3 bg-amber-50/40 border rounded-xl cursor-pointer"><p class="text-xs font-serif font-medium">"أَعُوذُ بِاللهِ مِنَ الشَّيْطَانِ الرَّجِيمِ: اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ..."</p><div class="text-left"><span class="bg-emerald-700 text-white text-[10px] font-bold px-2 py-0.5 rounded-full count-badge">التكرار: 1</span></div></div>
-                        <div onclick="countZikr(this, 3)" class="p-3 bg-amber-50/40 border rounded-xl cursor-pointer"><p class="text-xs font-serif font-medium">قراءة سورة 【الإخلاص، والفلق، والناس】</p><div class="text-left"><span class="bg-emerald-700 text-white text-[10px] font-bold px-2 py-0.5 rounded-full count-badge">التكرار: 3</span></div></div>
+                <div class="grid grid-cols-1 gap-6">
+                    <div class="space-y-3">
+                        <h3 class="font-bold text-emerald-800 border-b pb-1 text-base">🌅 أذكار الصباح كاملة:</h3>
+                        
+                        <div onclick="countZikr(this, 1)" class="p-4 bg-amber-50/40 border rounded-xl cursor-pointer transition hover:bg-amber-50">
+                            <p class="text-sm font-serif font-medium leading-relaxed">"أَعُوذُ بِاللهِ مِنَ الشَّيْطَانِ الرَّجِيمِ: اللّهُ لاَ إِلَـهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاء وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ."</p>
+                            <div class="text-left mt-2"><span class="bg-emerald-700 text-white text-xs font-bold px-2.5 py-1 rounded-full count-badge">التكرار: 1</span></div>
+                        </div>
+
+                        <div onclick="countZikr(this, 3)" class="p-4 bg-amber-50/40 border rounded-xl cursor-pointer transition hover:bg-amber-50">
+                            <p class="text-sm font-serif font-medium leading-relaxed">"بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ. قُلْ هُوَ اللَّهُ أَحَدٌ اللَّهُ الصَّمَدُ لَمْ يَلِدْ وَلَمْ يُولَدْ وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ." (قراءة سورة الإخلاص، والمعوذتين: الفلق والناس).</p>
+                            <div class="text-left mt-2"><span class="bg-emerald-700 text-white text-xs font-bold px-2.5 py-1 rounded-full count-badge">التكرار: 3</span></div>
+                        </div>
+
+                        <div onclick="countZikr(this, 1)" class="p-4 bg-amber-50/40 border rounded-xl cursor-pointer transition hover:bg-amber-50">
+                            <p class="text-sm font-serif font-medium leading-relaxed">"أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ. رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذَا الْيَوْمِ وَخَيْرَ مَا بَعْدَهُ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي هَذَا الْيَوْمِ وَشَرِّ مَا بَعْدَهُ، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ."</p>
+                            <div class="text-left mt-2"><span class="bg-emerald-700 text-white text-xs font-bold px-2.5 py-1 rounded-full count-badge">التكرار: 1</span></div>
+                        </div>
+
+                        <div onclick="countZikr(this, 1)" class="p-4 bg-amber-50/40 border rounded-xl cursor-pointer transition hover:bg-amber-50">
+                            <p class="text-sm font-serif font-medium leading-relaxed">"اللَّهُمَّ أَنْتَ رَبِّي لاَ إِلَهَ إِلاَّ أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لاَ يَغْفِرُ الذُّنُوبَ إِلاَّ أَنْتَ."</p>
+                            <div class="text-left mt-2"><span class="bg-emerald-700 text-white text-xs font-bold px-2.5 py-1 rounded-full count-badge">التكرار: 1</span></div>
+                        </div>
+
+                        <div onclick="countZikr(this, 4)" class="p-4 bg-amber-50/40 border rounded-xl cursor-pointer transition hover:bg-amber-50">
+                            <p class="text-sm font-serif font-medium leading-relaxed">"اللَّهُمَّ إِنِّي أَصْبَحْتُ أُشْهِدُكَ وَأُشْهِدُ حَمَلَةَ عَرْشِكَ، وَمَلاَئِكَتَكَ وَجَمِيعَ خَلْقِكَ، أَنَّكَ أَنْتَ اللَّهُ لاَ إِلَهَ إِلاَّ أَنْتَ وَحْدَكَ لاَ شَرِيكَ لَكَ، وَأَنَّ مُحَمَّداً عَبْدُكَ وَرَسُولُكَ."</p>
+                            <div class="text-left mt-2"><span class="bg-emerald-700 text-white text-xs font-bold px-2.5 py-1 rounded-full count-badge">التكرار: 4</span></div>
+                        </div>
+
+                        <div onclick="countZikr(this, 3)" class="p-4 bg-amber-50/40 border rounded-xl cursor-pointer transition hover:bg-amber-50">
+                            <p class="text-sm font-serif font-medium leading-relaxed">"بِسْمِ اللَّهِ الَّذِي لاَ يَضُرِّ مَعَ اسْمِهِ شَيْءٌ فِي الأَرْضِ وَلاَ فِي Сَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ."</p>
+                            <div class="text-left mt-2"><span class="bg-emerald-700 text-white text-xs font-bold px-2.5 py-1 rounded-full count-badge">التكرار: 3</span></div>
+                        </div>
                     </div>
-                    <div class="space-y-2">
-                        <h3 class="font-bold text-indigo-900 border-b pb-1">🌌 أذكار المساء:</h3>
-                        <div onclick="countZikr(this, 1)" class="p-3 bg-stone-50 border rounded-xl cursor-pointer"><p class="text-xs font-serif font-medium">"أَعُوذُ بِاللهِ مِنَ الشَّيْطَانِ الرَّجِيمِ: اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ..."</p><div class="text-left"><span class="bg-indigo-700 text-white text-[10px] font-bold px-2 py-0.5 rounded-full count-badge">التكرار: 1</span></div></div>
-                        <div onclick="countZikr(this, 3)" class="p-3 bg-stone-50 border rounded-xl cursor-pointer"><p class="text-xs font-serif font-medium">قراءة سورة 【الإخلاص، والفلق، والناس】</p><div class="text-left"><span class="bg-indigo-700 text-white text-[10px] font-bold px-2 py-0.5 rounded-full count-badge">التكرار: 3</span></div></div>
+
+                    <div class="space-y-3 pt-4 border-t">
+                        <h3 class="font-bold text-indigo-900 border-b pb-1 text-base">🌌 أذكار المساء كاملة:</h3>
+                        
+                        <div onclick="countZikr(this, 1)" class="p-4 bg-stone-50 border rounded-xl cursor-pointer transition hover:bg-stone-100">
+                            <p class="text-sm font-serif font-medium leading-relaxed">"أَعُوذُ بِاللهِ مِنَ الشَّيْطَانِ الرَّجِيمِ: اللّهُ لاَ إِلَـهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاء وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ."</p>
+                            <div class="text-left mt-2"><span class="bg-indigo-700 text-white text-xs font-bold px-2.5 py-1 rounded-full count-badge">التكرار: 1</span></div>
+                        </div>
+
+                        <div onclick="countZikr(this, 3)" class="p-4 bg-stone-50 border rounded-xl cursor-pointer transition hover:bg-stone-100">
+                            <p class="text-sm font-serif font-medium leading-relaxed">"بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ. قُلْ هُوَ اللَّهُ أَحَدٌ اللَّهُ الصَّمَدُ لَمْ يَلِدْ وَلَمْ يُولَدْ وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ." (قراءة سورة الإخلاص، والمعوذتين: الفلق والناس).</p>
+                            <div class="text-left mt-2"><span class="bg-indigo-700 text-white text-xs font-bold px-2.5 py-1 rounded-full count-badge">التكرار: 3</span></div>
+                        </div>
+
+                        <div onclick="countZikr(this, 1)" class="p-4 bg-stone-50 border rounded-xl cursor-pointer transition hover:bg-stone-100">
+                            <p class="text-sm font-serif font-medium leading-relaxed">"أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ. رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذِهِ اللَّيْلَةِ وَخَيْرَ مَا بَعْدَهَا، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي هَذِهِ اللَّيْلَةِ وَشَرِّ مَا بَعْدَهَا، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ."</p>
+                            <div class="text-left mt-2"><span class="bg-indigo-700 text-white text-xs font-bold px-2.5 py-1 rounded-full count-badge">التكرار: 1</span></div>
+                        </div>
+
+                        <div onclick="countZikr(this, 1)" class="p-4 bg-stone-50 border rounded-xl cursor-pointer transition hover:bg-stone-100">
+                            <p class="text-sm font-serif font-medium leading-relaxed">"اللَّهُمَّ أَنْتَ رَبِّي لاَ إِلَهَ إِلاَّ أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لاَ يَغْفِرُ الذُّنُوبَ إِلاَّ أَنْتَ."</p>
+                            <div class="text-left mt-2"><span class="bg-indigo-700 text-white text-xs font-bold px-2.5 py-1 rounded-full count-badge">التكرار: 1</span></div>
+                        </div>
+
+                        <div onclick="countZikr(this, 3)" class="p-4 bg-stone-50 border rounded-xl cursor-pointer transition hover:bg-stone-100">
+                            <p class="text-sm font-serif font-medium leading-relaxed">"أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ."</p>
+                            <div class="text-left mt-2"><span class="bg-indigo-700 text-white text-xs font-bold px-2.5 py-1 rounded-full count-badge">التكرار: 3</span></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -246,35 +262,53 @@
                 <div class="text-center"><button onclick="startLiveMeeting()" class="bg-emerald-700 text-white px-8 py-3 rounded-xl font-bold text-sm shadow-md">🔊 تشغيل الصوت والفيديو الآن</button></div>
             </div>
 
-            <div id="chat-page" class="page bg-white p-4 md:p-6 rounded-3xl shadow-sm border border-gray-100">
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                    
-                    <div class="lg:col-span-2 space-y-4">
-                        <h2 class="text-xl font-bold text-gray-800 border-r-4 border-emerald-700 pr-2">💬 غرفة المناقشات والدردشة العامة</h2>
-                        <div class="bg-gray-50 rounded-2xl border p-4 flex flex-col h-[420px]">
-                            <div id="chat-box" class="flex-1 overflow-y-auto space-y-3"></div>
-                            <div class="flex gap-2 border-t pt-3 mt-2">
-                                <input type="text" id="msg-input" class="flex-1 p-3 border text-sm rounded-xl outline-none" placeholder="اكتب رسالة عامة لكل المعهد هنا...">
-                                <button onclick="send()" id="send-btn" class="bg-emerald-900 text-white px-6 rounded-xl font-bold text-xs">إرسال للعام</button>
-                            </div>
-                        </div>
+            <div id="chat-selection-page" class="page bg-white p-6 rounded-3xl shadow-sm border border-gray-100 text-center">
+                <h2 class="text-xl font-bold mb-6 text-gray-800 border-r-4 border-emerald-700 pr-2 text-right">💬 قسم المحادثات والتواصل</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto my-8">
+                    <button onclick="showPage('global-chat-page')" class="p-8 bg-emerald-50 hover:bg-emerald-100 text-emerald-950 rounded-2xl shadow-sm border border-emerald-200/60 transition group flex flex-col items-center justify-center">
+                        <span class="text-4xl block mb-2 group-hover:scale-110 transition">👥</span>
+                        <h3 class="text-lg font-bold">الدردشة العامة</h3>
+                        <p class="text-xs text-emerald-700 mt-1">غرفة مناقشات مفتوحة يراها كافة طلاب ومعلمي المنصة</p>
+                    </button>
+                    <button onclick="showPage('private-chat-page')" class="p-8 bg-amber-50 hover:bg-amber-100 text-amber-950 rounded-2xl shadow-sm border border-amber-200/60 transition group flex flex-col items-center justify-center">
+                        <span class="text-4xl block mb-2 group-hover:scale-110 transition">🔒</span>
+                        <h3 class="text-lg font-bold">دردشة خاصة</h3>
+                        <p class="text-xs text-amber-700 mt-1">صندوق مراسلات مستقل ومباشر لشخص واحد فقط</p>
+                    </button>
+                </div>
+            </div>
+
+            <div id="global-chat-page" class="page bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold text-gray-800 border-r-4 border-emerald-700 pr-2">💬 غرفة المناقشات والدردشة العامة</h2>
+                    <button onclick="showPage('chat-selection-page')" class="text-xs font-bold text-gray-500 bg-gray-100 px-3 py-1.5 rounded-lg">⬅️ العودة للخيارات</button>
+                </div>
+                <div class="bg-gray-50 rounded-2xl border p-4 flex flex-col h-[450px]">
+                    <div id="chat-box" class="flex-1 overflow-y-auto space-y-3"></div>
+                    <div class="flex gap-2 border-t pt-3 mt-2">
+                        <input type="text" id="msg-input" class="flex-1 p-3 border text-sm rounded-xl outline-none" placeholder="اكتب رسالة عامة لكل المعهد هنا...">
+                        <button onclick="send()" id="send-btn" class="bg-emerald-900 text-white px-6 rounded-xl font-bold text-xs">إرسال للعام</button>
                     </div>
+                </div>
+            </div>
 
-                    <div class="bg-stone-50 border p-4 rounded-2xl shadow-inner space-y-3 flex flex-col h-[500px] lg:h-auto">
-                        <div class="flex items-center justify-between border-b pb-2">
-                            <h3 class="font-bold text-sm text-amber-900 flex items-center gap-1">🔒 صندوق المراسلات والاتصال الخاص</h3>
-                            <button onclick="closePrivateChat()" class="text-xs text-red-500 font-bold hover:underline">إغلاق الخاص</button>
-                        </div>
-                        
-                        <div>
-                            <p class="text-[10px] font-bold text-gray-500 mb-1">💬 المحادثات الأخيرة والسريعة:</p>
-                            <div id="recent-chats-list" class="flex gap-1.5 overflow-x-auto pb-2 text-[11px] font-medium text-gray-700">
-                                <span class="text-gray-400 text-[10px] py-1">لا توجد محادثات سابقة هنا بعد...</span>
-                            </div>
-                        </div>
+            <div id="private-chat-page" class="page bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold text-amber-900 border-r-4 border-amber-600 pr-2">🔒 دردشة خاصة</h2>
+                    <button onclick="showPage('chat-selection-page')" class="text-xs font-bold text-gray-500 bg-gray-100 px-3 py-1.5 rounded-lg">⬅️ العودة للخيارات</button>
+                </div>
 
-                        <div id="active-dm-target-box" class="p-2 bg-amber-100/60 rounded-xl text-center font-bold text-xs text-amber-950">
-                            اختر شخصًا من القوائم لبدء محادثة خاصة
+                <div class="bg-gray-50 p-3 rounded-xl border mb-3">
+                    <p class="text-[10px] font-bold text-gray-500 mb-1">💬 المحادثات الأخيرة والسريعة:</p>
+                    <div id="recent-chats-list" class="flex gap-1.5 overflow-x-auto pb-1 text-[11px] font-medium text-gray-700">
+                        <span class="text-gray-400 text-[10px] py-1">لا توجد محادثات سابقة هنا بعد... (اختر شخصاً من سجل الطلاب لمراسلته أول مرة)</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                    <div class="lg:col-span-3 space-y-3 flex flex-col h-[480px] bg-stone-50 border p-4 rounded-2xl shadow-inner">
+                        <div id="active-dm-target-box" class="p-2.5 bg-amber-100/70 rounded-xl text-center font-bold text-xs text-amber-950">
+                            الرجاء اختيار اسم طالب أو معلم من السجلات لبدء دردشة خاصة معه
                         </div>
 
                         <div id="private-call-actions" class="hidden grid grid-cols-2 gap-2">
@@ -282,19 +316,18 @@
                             <button onclick="startPrivateCall('video')" class="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-xl text-xs font-bold flex items-center justify-center gap-1 shadow-sm">📹 مكالمة فيديو</button>
                         </div>
 
-                        <div id="private-video-frame" class="hidden w-full h-[140px] bg-black rounded-xl overflow-hidden relative">
-                            <button onclick="endPrivateCall()" class="absolute top-1 right-1 bg-red-600 text-white font-bold text-[9px] px-1.5 py-0.5 rounded z-50">إنهاء الاتصال ❌</button>
+                        <div id="private-video-frame" class="hidden w-full h-[180px] bg-black rounded-xl overflow-hidden relative">
+                            <button onclick="endPrivateCall()" class="absolute top-2 right-2 bg-red-600 text-white font-bold text-[10px] px-2 py-0.5 rounded z-50">إنهاء الاتصال ❌</button>
                             <div id="private-jitsi-container" class="w-full h-full"></div>
                         </div>
 
-                        <div id="private-chat-box" class="flex-1 overflow-y-auto space-y-2 text-xs bg-white p-2 border rounded-xl shadow-inner"></div>
+                        <div id="private-chat-box" class="flex-1 overflow-y-auto space-y-2 text-xs bg-white p-3 border rounded-xl shadow-inner"></div>
 
-                        <div class="space-y-1 pt-1 border-t">
-                            <input type="text" id="private-msg-input" disabled class="w-full p-2 border text-xs rounded-xl outline-none bg-gray-100" placeholder="اكتب رسالة خاصة وسرية...">
-                            <button onclick="sendPrivateMessage()" id="private-send-btn" disabled class="w-full bg-amber-700 text-white p-2 rounded-xl text-xs font-bold shadow-sm">إرسال خاص</button>
+                        <div class="space-y-1.5 pt-1 border-t">
+                            <input type="text" id="private-msg-input" disabled class="w-full p-3 border text-xs rounded-xl outline-none bg-gray-100" placeholder="اكتب رسالة في الدردشة الخاصة...">
+                            <button onclick="sendPrivateMessage()" id="private-send-btn" disabled class="w-full bg-amber-700 text-white p-3 rounded-xl text-xs font-bold shadow-sm">إرسال خاص</button>
                         </div>
                     </div>
-
                 </div>
             </div>
 
@@ -347,17 +380,20 @@
         let isUserSheikhAhmed = false;
         let isApprovedStudent = false; 
 
-        // متغيرات المراسلة وقائمة التاريخ والمكالمات الخاصة
         let targetPrivateUser = ""; 
-        let privateChatListener = null;
         let privateJitsiApi = null;
-        let recentInteractedUsers = []; // مصفوفة لتخزين من راسلتهم مؤخراً لتحديث القائمة العلوية بها
+        let recentInteractedUsers = [];
 
         const staticStudents = ["احمد محمد حسين", "حسين محمد حسين", "مصعب احمد", "مالك احمد", "محمود تامر", "عبدالرحمن بكري", "خالد علي", "ياسين احمد"];
 
         function generateIdFromName(name) {
             if(!name) return "";
             return name.trim().toLowerCase().replace(/\s+/g, '-').replace(/[أإآ]/g, 'ا').replace(/ة/g, 'ه');
+        }
+
+        window.triggerNav = function(btnId) {
+            const btn = document.getElementById(btnId);
+            if(btn) { btn.click(); }
         }
 
         window.toggleRegisterBox = function(showRegister) {
@@ -410,17 +446,16 @@
                 onDisconnect(statusRef).remove();
             }
             
-            loadRecentChatsList(); // تحميل القائمة العلوية فور الدخول
+            loadRecentChatsList();
             document.getElementById('login-page').classList.add('hidden');
             document.getElementById('app-main').classList.remove('hidden');
         }
 
-        // إدارة مصفوفة وتحديث القائمة العلوية للأشخاص المراسَلين
         function addToRecentChats(name) {
             if(!name || name === currentUserNameOriginal) return;
             if(!recentInteractedUsers.includes(name)) {
-                recentInteractedUsers.unshift(name); // إضافة في البداية
-                if(recentInteractedUsers.length > 8) recentInteractedUsers.pop(); // الاحتفاظ بآخر 8 أشخاص
+                recentInteractedUsers.unshift(name);
+                if(recentInteractedUsers.length > 8) recentInteractedUsers.pop();
                 localStorage.setItem(`recents_${generateIdFromName(currentUserNameOriginal)}`, JSON.stringify(recentInteractedUsers));
                 renderRecentChatsUI();
             }
@@ -438,7 +473,7 @@
             const container = document.getElementById('recent-chats-list');
             if(!container) return;
             if(recentInteractedUsers.length === 0) {
-                container.innerHTML = `<span class="text-gray-400 text-[10px] py-1">لا توجد محادثات سابقة هنا بعد...</span>`;
+                container.innerHTML = `<span class="text-gray-400 text-[10px] py-1">لا توجد محادثات سابقة هنا بعد... (اختر شخصاً من سجل الطلاب لمراسلته أول مرة)</span>`;
                 return;
             }
             container.innerHTML = "";
@@ -451,37 +486,22 @@
             });
         }
 
-        // دالة فتح محادثة خاصة مع مستخدم معين
         window.openPrivateChat = function(targetName) {
             if(targetName === currentUserNameOriginal) { alert("لا يمكنك مراسلة نفسك خاص!"); return; }
             targetPrivateUser = targetName;
             
-            addToRecentChats(targetName); // حفظ الشخص في قائمة المراسلات الأخيرة
+            addToRecentChats(targetName);
 
-            // تفعيل حقول وأزرار الاتصال الخاص
             document.getElementById('private-msg-input').disabled = false;
             document.getElementById('private-msg-input').classList.remove('bg-gray-100');
             document.getElementById('private-send-btn').disabled = false;
-            document.getElementById('private-call-actions').classList.remove('hidden'); // إظهار أزرار مكالمة الخاص
-            document.getElementById('active-dm-target-box').innerText = `🔒 محادثة خاصة مع: ${targetPrivateUser}`;
+            document.getElementById('private-call-actions').classList.remove('hidden');
+            document.getElementById('active-dm-target-box').innerText = `🔒 دردشة خاصة مع: ${targetPrivateUser}`;
             
-            showPage('chat-page');
+            showPage('private-chat-page');
             listenToPrivateMessages();
         }
 
-        window.closePrivateChat = function() {
-            endPrivateCall();
-            targetPrivateUser = "";
-            document.getElementById('private-msg-input').disabled = true;
-            document.getElementById('private-msg-input').value = "";
-            document.getElementById('private-msg-input').classList.add('bg-gray-100');
-            document.getElementById('private-send-btn').disabled = true;
-            document.getElementById('private-call-actions').classList.add('hidden');
-            document.getElementById('active-dm-target-box').innerText = "اختر شخصًا من القوائم لبدء محادثة خاصة";
-            document.getElementById('private-chat-box').innerHTML = "";
-        }
-
-        // تشغيل مكالمة فيديو أو صوت خاصة
         window.startPrivateCall = function(type) {
             if(!targetPrivateUser) return;
             const frame = document.getElementById('private-video-frame');
@@ -489,7 +509,6 @@
             frame.classList.remove('hidden');
             container.innerHTML = "";
 
-            // توليد معرف غرفة سري وفريد وخاص ومغلق بين الشخصين تماماً
             const privateRoomRoomId = "Private_Call_" + getPrivateChatRoomId(currentUserNameOriginal, targetPrivateUser);
 
             privateJitsiApi = new JitsiMeetExternalAPI("meet.jit.si", {
@@ -525,7 +544,7 @@
                 const box = document.getElementById('private-chat-box');
                 if(!box) return; box.innerHTML = "";
                 if(!snapshot.exists()) {
-                    box.innerHTML = `<p class="text-[10px] text-gray-400 text-center py-4">بداية المحادثة الخاصة الآمنة...</p>`;
+                    box.innerHTML = `<p class="text-[10px] text-gray-400 text-center py-4">بداية الدردشة الخاصة...</p>`;
                     return;
                 }
                 snapshot.forEach((child) => {
@@ -563,10 +582,18 @@
 
         window.showPage = function(id) {
             document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-            document.getElementById(id).classList.add('active');
-            if(window.event && window.event.currentTarget) {
+            const targetEl = document.getElementById(id);
+            if(targetEl) targetEl.classList.add('active');
+            
+            let targetNavBtnId = "nav-" + id;
+            if(id === 'global-chat-page' || id === 'private-chat-page') {
+                targetNavBtnId = 'nav-chat-selection-page';
+            }
+            
+            const activeBtn = document.getElementById(targetNavBtnId);
+            if(activeBtn) {
                 document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('bg-emerald-800', 'font-bold'));
-                window.event.currentTarget.classList.add('bg-emerald-800', 'font-bold');
+                activeBtn.classList.add('bg-emerald-800', 'font-bold');
             }
         }
 
